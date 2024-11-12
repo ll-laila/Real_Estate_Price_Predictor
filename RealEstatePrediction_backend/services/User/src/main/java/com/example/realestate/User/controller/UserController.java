@@ -4,6 +4,7 @@ import com.example.realestate.User.request.UserRequest;
 import com.example.realestate.User.response.UserResponse;
 import com.example.realestate.User.service.UserService;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,14 +14,16 @@ import java.util.List;
 @RequestMapping("/api/v1/users")
 public class UserController {
 
+    @Autowired
     private UserService userService;
+
 
     @GetMapping("/testUser")
     public ResponseEntity<String> test() {
         return ResponseEntity.ok("Service User is working!");
     }
 
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<String> createUser(@RequestBody @Valid UserRequest userRequest) {
        return ResponseEntity.ok(userService.createUser(userRequest));
     }

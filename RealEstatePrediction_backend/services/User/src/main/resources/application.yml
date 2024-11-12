@@ -3,7 +3,3 @@ spring:
     import: optional:configserver:http://localhost:8888
   application:
     name: user-service
-  data:
-    mongodb:
-      uri: mongodb://timaslilaila:7RiZRnQZYmJOKt7u@localhost:27017
-      database: userDB
