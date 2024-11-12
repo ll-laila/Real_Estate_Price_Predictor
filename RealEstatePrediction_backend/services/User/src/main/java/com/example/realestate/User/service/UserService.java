@@ -7,8 +7,10 @@ import com.example.realestate.User.mapper.UserMapper;
 import com.example.realestate.User.repository.UserRepository;
 import com.example.realestate.User.request.UserRequest;
 import com.example.realestate.User.response.UserResponse;
+import jakarta.annotation.PostConstruct;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +25,25 @@ public class UserService {
 
     private final UserRepository userRepository;
     private final UserMapper userMapper;
+
+//    @PostConstruct
+//    public void initializeDatabase() {
+//        // Create a sample user to force MongoDB to create the database and collection
+//        User user = new User();
+//        user.setUsername("testuser");
+//        user.setPassword("password");
+//        user.setFirstName("Test");
+//        user.setLastName("User");
+//        user.setEmail("testuser@example.com");
+//        user.setPhone("1234567890");
+//
+//        userRepository.save(user);  // This will trigger MongoDB to create the database and collection
+//    }
+
+    public String createUser(UserRequest userRequest) {
+        var user = userRepository.save(userMapper.toUser(userRequest));
+        return user.getId();
+    }
 
     public void updateUser(@Valid UserRequest userRequest) {
 

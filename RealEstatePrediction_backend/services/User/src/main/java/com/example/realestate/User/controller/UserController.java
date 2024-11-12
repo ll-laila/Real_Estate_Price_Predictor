@@ -20,6 +20,11 @@ public class UserController {
         return ResponseEntity.ok("Service User is working!");
     }
 
+    @PostMapping
+    public ResponseEntity<String> createUser(@RequestBody @Valid UserRequest userRequest) {
+       return ResponseEntity.ok(userService.createUser(userRequest));
+    }
+
     @PutMapping
     public ResponseEntity<Void> updateUser(
             @RequestBody @Valid UserRequest userRequest)
