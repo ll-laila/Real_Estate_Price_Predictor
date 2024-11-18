@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: facture       # Set your preferred username
+      POSTGRES_PASSWORD: facture  # Set your preferred password
+      POSTGRES_DB: facture     # Set your preferred database name
+    ports:
+      - "8333:8222"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
