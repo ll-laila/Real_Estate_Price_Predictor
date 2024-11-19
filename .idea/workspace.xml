@@ -5,24 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac16b14b-1950-4b4c-8d7c-88070da50f1c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/exception/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/handler/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/handler/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/request/UserRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/response/UserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/IA.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +35,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Merging main",
-    "last_opened_file_path": "C:/Users/WIN/Desktop/IA/RealEstatePrediction_backend/services/config-server/pom.xml",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/WIN/Desktop/IA_project/Real_Estate_Price_Predictor/RealEstatePrediction_backend/services/config-server/pom.xml",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -62,6 +45,9 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -126,6 +112,15 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Docker.RealEstatePrediction_backend: Compose Deployment" />
+      <item itemvalue="Spring Boot.ConfigServerApplication" />
+      <item itemvalue="Spring Boot.DiscoveryApplication" />
+      <item itemvalue="Spring Boot.GatewayApplication" />
+      <item itemvalue="Spring Boot.OffreApplication" />
+      <item itemvalue="Spring Boot.PaymentApplication" />
+      <item itemvalue="Spring Boot.UserApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Docker.RealEstatePrediction_backend: Compose Deployment" />
@@ -143,6 +138,7 @@
       <workItem from="1731097757293" duration="3338000" />
       <workItem from="1731173181035" duration="2259000" />
       <workItem from="1731473771456" duration="359000" />
+      <workItem from="1732014436720" duration="2585000" />
     </task>
     <servers />
   </component>
