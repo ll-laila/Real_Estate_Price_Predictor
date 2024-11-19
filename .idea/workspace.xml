@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac16b14b-1950-4b4c-8d7c-88070da50f1c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="ac16b14b-1950-4b4c-8d7c-88070da50f1c" name="Changes" comment="fix user mongodb error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/config-server/src/main/resources/configurations/user-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/config-server/src/main/resources/configurations/user-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,8 +206,17 @@
       <workItem from="1732009839992" duration="840000" />
       <workItem from="1732010865805" duration="2047000" />
       <workItem from="1732041618985" duration="2483000" />
-      <workItem from="1732044200276" duration="2988000" />
+      <workItem from="1732044200276" duration="4110000" />
     </task>
+    <task id="LOCAL-00001" summary="fix user mongodb error">
+      <option name="closed" value="true" />
+      <created>1732047479370</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732047479370</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,5 +226,7 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/RealEstatePrediction_backend" />
     </ignored-roots>
+    <MESSAGE value="fix user mongodb error" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix user mongodb error" />
   </component>
 </project>
