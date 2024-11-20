@@ -9,10 +9,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
         <module name="Payment" />
-        <module name="Offre" />
         <module name="User" />
         <module name="Gateway" />
         <module name="discovery" />
+        <module name="Offre (1)" />
+        <module name="Offre" />
       </profile>
     </annotationProcessing>
   </component>
@@ -20,6 +21,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Gateway" options="-parameters" />
       <module name="Offre" options="-parameters" />
+      <module name="Offre (1)" options="-parameters" />
       <module name="Payment" options="-parameters" />
       <module name="User" options="-parameters" />
       <module name="config-server" options="-parameters" />
