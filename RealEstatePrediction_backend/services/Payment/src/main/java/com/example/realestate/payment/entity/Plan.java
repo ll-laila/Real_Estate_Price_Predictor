@@ -1,4 +1,4 @@
-package com.example.realestate.User;
+package com.example.realestate.payment.entity;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;
@@ -10,7 +10,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Getter
 @Setter
 @Document
-public class UserRequest {
+public class Plan {
     @Id
-    private String id;
+    private Long id;
+    private String name;
+    private double price;
+    private int maxPrediction;
+    private String description;
 }
