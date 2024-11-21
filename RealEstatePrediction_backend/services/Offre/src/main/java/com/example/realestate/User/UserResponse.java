@@ -1,4 +1,10 @@
 package com.example.realestate.User;
 
-public class UserResponse {
+public record UserResponse(
+        String id,
+        String firstname,
+        String lastname,
+        String email
+) {
+
 }

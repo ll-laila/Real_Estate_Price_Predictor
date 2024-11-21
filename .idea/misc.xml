@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" languageLevel="JDK_22" project-jdk-name="17" project-jdk-type="JavaSDK" />
+=======
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/pom.xml" />
+        <option value="$PROJECT_DIR$/RealEstatePrediction_backend/services/Payment/pom.xml" />
+        <option value="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/pom.xml" />
+        <option value="$PROJECT_DIR$/RealEstatePrediction_backend/services/Gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/RealEstatePrediction_backend/services/discovery/pom.xml" />
+        <option value="$PROJECT_DIR$/RealEstatePrediction_backend/services/config-server/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK" />
+>>>>>>> eec6524c1a7eea4f0bbfe0f40639a870cf069649
 </project>
