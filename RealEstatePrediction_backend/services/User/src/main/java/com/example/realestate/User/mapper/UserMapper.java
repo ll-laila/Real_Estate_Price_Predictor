@@ -19,6 +19,7 @@ public class UserMapper {
                 .firstName(request.firstName())
                 .lastName(request.lastName())
                 .phone(request.phone())
+                .password(request.password())
                 .build();
     }
 

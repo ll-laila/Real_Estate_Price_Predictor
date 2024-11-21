@@ -1,7 +1,10 @@
 package com.example.realestate.offre.service;
 
 
+<<<<<<< HEAD
 import com.example.realestate.offre.dto.OffreDTO;
+=======
+>>>>>>> 688507999801bca93855486daac82b630257a191
 import com.example.realestate.offre.mapper.OffreRequest;
 import com.example.realestate.offre.mapper.OffreResponse;
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,10 @@
 package com.example.realestate.offre.entity;
 
+<<<<<<< HEAD
 import jakarta.persistence.ManyToOne;
+=======
+
+>>>>>>> 688507999801bca93855486daac82b630257a191
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

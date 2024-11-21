@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="ac16b14b-1950-4b4c-8d7c-88070da50f1c" name="Changes" comment="">
 <<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/.idea/Real_Estate_Price_Predictor.iml" afterDir="false" />
@@ -12,7 +13,25 @@
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
 =======
 >>>>>>> eec6524c1a7eea4f0bbfe0f40639a870cf069649
+=======
+    <list default="true" id="ac16b14b-1950-4b4c-8d7c-88070da50f1c" name="Changes" comment="fix user mongodb error">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bf9de9c1-1175-4a62-83c3-7932a826c71c.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+>>>>>>> 688507999801bca93855486daac82b630257a191
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/User/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/User/UserClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/User/UserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/User/UserRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/User/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/User/UserResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/controller/OffreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/controller/OffreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/entity/Offre.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/entity/Offre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/mapper/MapperOffre.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/repository/OffreRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/service/OffreService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/config-server/src/main/resources/configurations/offre-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/config-server/src/main/resources/configurations/offre-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/config-server/src/main/resources/configurations/payment-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/config-server/src/main/resources/configurations/payment-service.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +42,20 @@
     <option name="CLEAR_OUTPUT_DIRECTORY" value="false" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/RealEstatePrediction_backend" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;huda-elhirm&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ll-laila/Real_Estate_Price_Predictor.git&quot;,
+    &quot;accountId&quot;: &quot;33d0830a-da4d-42e7-b342-913aa0740faa&quot;
+  }
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -39,10 +70,12 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2oaBHVYhwB6gxFKCG0kGhEFuS5i" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
 <<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
@@ -97,6 +130,61 @@
     <option name="notificationShown" value="true" />
   </component>
 >>>>>>> eec6524c1a7eea4f0bbfe0f40639a870cf069649
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Docker.RealEstatePrediction_backend: Compose Deployment.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ConfigServerApplication.executor": "Run",
+    "Spring Boot.DiscoveryApplication (1).executor": "Run",
+    "Spring Boot.DiscoveryApplication.executor": "Run",
+    "Spring Boot.GatewayApplication.executor": "Run",
+    "Spring Boot.OffreApplication.executor": "Run",
+    "Spring Boot.PaymentApplication.executor": "Run",
+    "Spring Boot.UserApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "develop",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/S5/Projet_pythone/Real_estate_predection_full/Real_Estate_Price_Predictor/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/service",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mongo"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\S5\Projet_pythone\Real_estate_predection_full\Real_Estate_Price_Predictor\RealEstatePrediction_backend\services\Offre\src\main\java\com\example\realestate\offre\service" />
+      <recent name="C:\S5\Projet_pythone\Real_estate_predection_full\Real_Estate_Price_Predictor\RealEstatePrediction_backend\services\Offre\src\main\java\com\example\realestate\offre\repository" />
+      <recent name="C:\S5\Projet_pythone\Real_estate_predection_full\Real_Estate_Price_Predictor\RealEstatePrediction_backend\services\Offre\src\main\java\com\example\realestate\offre\mapper" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.realestate.offre.exception" />
+      <recent name="com.example.realestate.offre.entity" />
+    </key>
+  </component>
+>>>>>>> 688507999801bca93855486daac82b630257a191
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -106,10 +194,11 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ConfigServerApplication">
+  <component name="RunManager" selected="Docker.RealEstatePrediction_backend: Compose Deployment">
     <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/corretto-21.0.4" />
-      <module name="Real_Estate_Price_Predictor" />
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="config-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.config_server.ConfigServerApplication" />
       <extension name="de.eudaemon.ideaswag.SwingspectorExtension">
         <Swingspector>
@@ -118,21 +207,32 @@
           <timeout>5.0</timeout>
         </Swingspector>
       </extension>
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DiscoveryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/corretto-21.0.4" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <module name="Real_Estate_Price_Predictor" />
+    <configuration name="DiscoveryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="discovery" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.discovery.DiscoveryApplication" />
-      <extension name="de.eudaemon.ideaswag.SwingspectorExtension">
-        <Swingspector>
-          <keystroke code="59" modifiers="130" />
-          <active value="false" />
-          <timeout>5.0</timeout>
-        </Swingspector>
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -141,6 +241,16 @@
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.realestate.GatewayApplication" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -148,6 +258,16 @@
     <configuration name="OffreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Offre" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.realestate.OffreApplication" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -155,6 +275,16 @@
     <configuration name="PaymentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Payment" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.realestate.PaymentApplication" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -162,6 +292,16 @@
     <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="User" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.realestate.UserApplication" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -198,8 +338,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
       </set>
     </attachedChunks>
   </component>
@@ -220,13 +360,36 @@
       <workItem from="1732006991254" duration="2481000" />
       <workItem from="1732009839992" duration="840000" />
       <workItem from="1732010865805" duration="2047000" />
+<<<<<<< HEAD
 =======
       <workItem from="1732014436720" duration="2585000" />
 >>>>>>> eec6524c1a7eea4f0bbfe0f40639a870cf069649
+=======
+      <workItem from="1732041618985" duration="2483000" />
+      <workItem from="1732044200276" duration="4110000" />
+      <workItem from="1732049896859" duration="2800000" />
+      <workItem from="1732099913134" duration="296000" />
+>>>>>>> 688507999801bca93855486daac82b630257a191
     </task>
+    <task id="LOCAL-00001" summary="fix user mongodb error">
+      <option name="closed" value="true" />
+      <created>1732047479370</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732047479370</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/RealEstatePrediction_backend" />
+    </ignored-roots>
+    <MESSAGE value="fix user mongodb error" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix user mongodb error" />
   </component>
 </project>

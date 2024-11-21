@@ -1,7 +1,14 @@
 package com.example.realestate.offre.entity;
 
 
+<<<<<<< HEAD
 import lombok.*;
+=======
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+>>>>>>> 688507999801bca93855486daac82b630257a191
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 

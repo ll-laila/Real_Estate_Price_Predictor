@@ -6,7 +6,7 @@ spring:
       username: timaslilaila
       password: 7RiZRnQZYmJOKt7u
       host: localhost
-      port: 27017
+      port: 27018
       database: user
       authentication-database: admin
 
