@@ -9,10 +9,22 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
         <module name="Payment" />
-        <module name="User" />
+<<<<<<< HEAD
         <module name="Offre" />
+        <module name="User" />
+=======
+        <module name="User" />
+<<<<<<< HEAD
+        <module name="Offre" />
+>>>>>>> bdeea280d25832feb57df378efec00f635ca9998
         <module name="Gateway" />
         <module name="discovery" />
+=======
+        <module name="Gateway" />
+        <module name="discovery" />
+        <module name="Offre (1)" />
+        <module name="Offre" />
+>>>>>>> 688507999801bca93855486daac82b630257a191
       </profile>
     </annotationProcessing>
   </component>
@@ -20,6 +32,10 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Gateway" options="-parameters" />
       <module name="Offre" options="-parameters" />
+<<<<<<< HEAD
+=======
+      <module name="Offre (1)" options="-parameters" />
+>>>>>>> 688507999801bca93855486daac82b630257a191
       <module name="Payment" options="-parameters" />
       <module name="User" options="-parameters" />
       <module name="config-server" options="-parameters" />
