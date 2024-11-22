@@ -6,6 +6,7 @@ import com.example.realestate.User.response.UserResponse;
 import com.example.realestate.User.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +17,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserController {
 
-    private final UserService userService;
+    @Autowired
+    private  UserService userService;
 
 
     @GetMapping("/testUser")
