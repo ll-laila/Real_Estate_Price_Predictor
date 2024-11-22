@@ -15,7 +15,7 @@ public interface UserClient {
 
     @GetMapping("/testUser")
     ResponseEntity<String> testUser();
-    @GetMapping("/{customer-id}")
-    UserResponse findById(@PathVariable("customer-id") String userId);
+    @GetMapping("/{user-id}")
+    UserResponse findById(@PathVariable("user-id") String userId);
 
 }

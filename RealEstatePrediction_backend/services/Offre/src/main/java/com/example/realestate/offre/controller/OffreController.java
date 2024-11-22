@@ -1,16 +1,9 @@
 package com.example.realestate.offre.controller;
 
-<<<<<<< HEAD
-import com.example.realestate.offre.dto.OffreDTO;
 import com.example.realestate.offre.mapper.OffreRequest;
 import com.example.realestate.offre.mapper.OffreResponse;
 import com.example.realestate.offre.service.OffreService;
-import com.example.realestate.offre.service.OffreServiceold;
-=======
-import com.example.realestate.offre.mapper.OffreRequest;
-import com.example.realestate.offre.mapper.OffreResponse;
-import com.example.realestate.offre.service.OffreService;
->>>>>>> 688507999801bca93855486daac82b630257a191
+
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
