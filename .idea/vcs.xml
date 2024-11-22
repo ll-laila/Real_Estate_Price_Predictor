@@ -2,5 +2,12 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <mapping directory="$PROJECT_DIR$/RealEstatePrediction_backend" vcs="Git" />
+=======
+>>>>>>> eec6524c1a7eea4f0bbfe0f40639a870cf069649
+=======
+>>>>>>> 688507999801bca93855486daac82b630257a191
   </component>
 </project>
