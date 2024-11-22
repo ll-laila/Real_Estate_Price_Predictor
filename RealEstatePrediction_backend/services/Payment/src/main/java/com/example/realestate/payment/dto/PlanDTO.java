@@ -8,5 +8,9 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class PlanDTO {
-
+    private Long id;
+    private String name;
+    private double price;
+    private int maxPrediction;
+    private String description;
 }

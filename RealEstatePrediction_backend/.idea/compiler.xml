@@ -3,6 +3,14 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
+<<<<<<< HEAD
+=======
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+      </profile>
+>>>>>>> main
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="config-server" target="17" />
@@ -12,5 +20,18 @@
       <module name="Payment" target="17" />
       <module name="User" target="17" />
     </bytecodeTargetLevel>
+<<<<<<< HEAD
+=======
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Gateway" options="-parameters" />
+      <module name="Offre" options="-parameters" />
+      <module name="Payment" options="-parameters" />
+      <module name="User" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+      <module name="discovery" options="-parameters" />
+    </option>
+>>>>>>> main
   </component>
 </project>

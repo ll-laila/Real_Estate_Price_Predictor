@@ -7,6 +7,8 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class PlanDTO {
-
+public class SubscriptionDTO {
+    private String id;
+    private PlanDTO plan;
+    private String userId;
 }
