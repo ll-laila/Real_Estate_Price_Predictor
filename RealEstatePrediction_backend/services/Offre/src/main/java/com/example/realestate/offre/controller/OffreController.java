@@ -3,6 +3,9 @@ package com.example.realestate.offre.controller;
 import com.example.realestate.offre.request.OffreRequest;
 import com.example.realestate.offre.response.OffreResponse;
 import com.example.realestate.offre.service.OffreService;
+import com.example.realestate.prediction.PredictionClient;
+import com.example.realestate.prediction.PredictionRequest;
+import com.example.realestate.prediction.PredictionResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +23,15 @@ public class OffreController {
 
     @Autowired
     private OffreService offreService;
+
+    @Autowired
+    private PredictionClient predictionClient;
+
+    @PostMapping("/prediction")
+    public ResponseEntity<PredictionResponse> prediction(@RequestBody PredictionRequest request) {
+        return ResponseEntity.ok(predictionClient.getPrediction(request));
+    }
+
 
     @PostMapping
     public ResponseEntity<String> createOfferWithImmobilier(@RequestBody @Valid OffreRequest request) {
