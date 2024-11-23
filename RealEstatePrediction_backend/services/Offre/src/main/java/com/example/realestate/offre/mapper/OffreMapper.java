@@ -1,68 +1,41 @@
 package com.example.realestate.offre.mapper;
 
-import com.example.realestate.offre.entity.Immobilier;
 import com.example.realestate.offre.entity.Offre;
+import com.example.realestate.offre.request.OffreRequest;
+import com.example.realestate.offre.response.OffreResponse;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+
+
+@Component
 public class OffreMapper {
 
-    // Convert OffreRequest to Offre Entity
-    public static Offre toOffreEntity(OffreRequest request) {
+
+
+    public static Offre toOffre(OffreRequest request) {
         if (request == null) {
             return null;
         }
+
         return Offre.builder()
                 .id(request.id())
+                .immobilier(ImmobilierMapper.toImmobilier(request.immobilierRequest()))
                 .userId(request.userId())
-                .immobilier(toImmobilierEntity(request.immobilier()))
+                .dateDePublication(request.dateDePublication())
                 .build();
     }
 
-    // Convert Immobilier to Immobilier Entity
-    public static Immobilier toImmobilierEntity(Immobilier immobilier) {
-        if (immobilier == null) {
-            return null;
-        }
-        return Immobilier.builder()
-                .id(immobilier.getId())
-                .title(immobilier.getTitle())
-                .img(immobilier.getImg())
-                .bedroom(immobilier.getBedroom())
-                .bathroom(immobilier.getBathroom())
-                .price(immobilier.getPrice())
-                .address(immobilier.getAddress())
-                .latitude(immobilier.getLatitude())
-                .longitude(immobilier.getLongitude())
-                .build();
-    }
-
-    // Convert Offre Entity to OffreResponse
-    public static OffreResponse toResponse(Offre offre) {
+    public static OffreResponse fromOffre(Offre offre) {
         if (offre == null) {
             return null;
         }
+
         return new OffreResponse(
                 offre.getId(),
-                toImmobilierResponse(offre.getImmobilier()),
+                ImmobilierMapper.fromImmobilier(offre.getImmobilier()),
                 offre.getUserId(),
-                offre.getDateDePublication(),
-                offre.getDateDeUpdate()
-        );
-    }
-
-    // Convert Immobilier Entity to ImmobilierResponse
-    public static Immobilier toImmobilierResponse(Immobilier immobilier) {
-        if (immobilier == null) {
-            return null;
-        }
-        return new Immobilier(
-                immobilier.getId(),
-                immobilier.getTitle(),
-                immobilier.getImg(),
-                immobilier.getBedroom(),
-                immobilier.getBathroom(),
-                immobilier.getPrice(),
-                immobilier.getAddress(),
-                immobilier.getLatitude(),
-                immobilier.getLongitude()
+                offre.getDateDePublication()
         );
     }
 }

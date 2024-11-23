@@ -13,8 +13,6 @@ import java.util.Optional;
 )
 public interface UserClient {
 
-    @GetMapping("/testUser")
-    ResponseEntity<String> testUser();
     @GetMapping("/{user-id}")
     UserResponse findById(@PathVariable("user-id") String userId);
 

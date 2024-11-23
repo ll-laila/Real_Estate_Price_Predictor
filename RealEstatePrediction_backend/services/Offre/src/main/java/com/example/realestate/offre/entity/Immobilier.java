@@ -6,7 +6,7 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "immobiliers")  // Spécifie que cette entité sera stockée dans la collection "immobiliers"
+@Document(collection = "immobiliers")
 @Data
 @Builder
 @NoArgsConstructor
@@ -20,6 +20,7 @@ public class Immobilier {
     private int bathroom;
     private double price;
     private String address;
+    private String city;
     private double latitude;
     private double longitude;
 

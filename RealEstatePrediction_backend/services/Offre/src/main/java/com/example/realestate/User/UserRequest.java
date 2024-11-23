@@ -1,9 +1,14 @@
 package com.example.realestate.User;
 
-public class UserRequest {
-    private Long id;
-    private String firstName;
-    private String lastName;
-    private String email;
-    private String phone;
+
+public record UserRequest(
+        String id,
+        String username,
+        String firstName,
+        String lastName,
+        String email,
+        String password,
+        String phone
+) {
+
 }
