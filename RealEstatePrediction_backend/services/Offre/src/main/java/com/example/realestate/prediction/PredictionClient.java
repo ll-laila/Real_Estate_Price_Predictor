@@ -8,12 +8,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @FeignClient(
-        name = "prediction-service",
-        url = "http://127.0.0.1:8000/api/predict/"
+        name = "",
+        url = ""
 )
 public interface PredictionClient {
 
-    @PostMapping
-    PredictionResponse getPrediction(@RequestBody PredictionRequest request);
 
 }

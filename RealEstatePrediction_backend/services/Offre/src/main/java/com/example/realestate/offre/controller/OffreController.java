@@ -27,11 +27,6 @@ public class OffreController {
     @Autowired
     private PredictionClient predictionClient;
 
-    @PostMapping("/prediction")
-    public ResponseEntity<PredictionResponse> prediction(@RequestBody PredictionRequest request) {
-        return ResponseEntity.ok(predictionClient.getPrediction(request));
-    }
-
 
     @PostMapping
     public ResponseEntity<String> createOfferWithImmobilier(@RequestBody @Valid OffreRequest request) {
