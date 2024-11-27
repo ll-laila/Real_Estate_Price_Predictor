@@ -1,8 +1,9 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./navbar.scss";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+
 
   const user = true;
   
@@ -18,7 +19,7 @@ function Navbar() {
             <a href="/">Home</a>
             <a href="/Offres">Offres</a>
             <a href="/Myspace">My space</a>
-            <a href="/Other">Other</a>
+            <a href="/Other">{test}</a>
           </div>
           <div className="right">
             <div className="user">

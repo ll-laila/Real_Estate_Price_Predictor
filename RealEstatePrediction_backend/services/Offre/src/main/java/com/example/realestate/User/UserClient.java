@@ -13,7 +13,7 @@ import java.util.Optional;
 )
 public interface UserClient {
 
-//    @GetMapping("/{user-id}")
-//    UserResponse findById(@PathVariable("user-id") String userId);
+    @GetMapping("/{user-id}")
+    UserResponse findById(@PathVariable("user-id") String userId);
 
 }

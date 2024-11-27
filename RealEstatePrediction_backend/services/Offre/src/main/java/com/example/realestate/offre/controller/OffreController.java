@@ -16,6 +16,7 @@ import java.util.List;
 
 
 
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api/v1/offres")
 @RequiredArgsConstructor
@@ -26,6 +27,12 @@ public class OffreController {
 
     @Autowired
     private PredictionClient predictionClient;
+
+
+    @GetMapping("/test")
+    public ResponseEntity<String> test() {
+        return ResponseEntity.ok("Service Offer is working!");
+    }
 
 
     @PostMapping

@@ -40,11 +40,11 @@ public class OffreService {
     @Transactional(rollbackFor = Exception.class)
     public String createOfferWithImmobilier(OffreRequest offreRequest) {
 
-//        var user = this.userClient.findById(offreRequest.userId());
-//        if (user == null) {
-//            log.error("Utilisateur non trouvé pour l'ID : {}", offreRequest.userId());
-//            throw new BusinessException("Utilisateur introuvable pour l'ID fourni.");
-//        }
+        var user = this.userClient.findById(offreRequest.userId());
+        if (user == null) {
+            log.error("Utilisateur non trouvé pour l'ID : {}", offreRequest.userId());
+            throw new BusinessException("Utilisateur introuvable pour l'ID fourni.");
+        }
 
         Immobilier immobilier = ImmobilierMapper.toImmobilier(offreRequest.immobilierRequest());
         Immobilier savedImmobilier = immobilierRepository.save(immobilier);
@@ -68,11 +68,11 @@ public class OffreService {
         Offre existingOffre = offreRepository.findById(offreRequest.id())
                 .orElseThrow(() -> new BusinessException("Offre introuvable pour l'ID : " + offreRequest.id()));
 
-//        var user = this.userClient.findById(offreRequest.userId());
-//        if (user == null) {
-//            log.error("Utilisateur non trouvé pour l'ID : {}", offreRequest.userId());
-//            throw new BusinessException("Utilisateur introuvable pour l'ID fourni.");
-//        }
+        var user = this.userClient.findById(offreRequest.userId());
+        if (user == null) {
+            log.error("Utilisateur non trouvé pour l'ID : {}", offreRequest.userId());
+            throw new BusinessException("Utilisateur introuvable pour l'ID fourni.");
+        }
 
         Immobilier immobilier;
         if (offreRequest.immobilierRequest().id() != null) {
