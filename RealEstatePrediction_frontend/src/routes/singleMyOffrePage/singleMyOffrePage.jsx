@@ -1,11 +1,13 @@
-import "./singlePage.scss";
+import "./singleMyOffrePage.scss";
 import Slider from "../../components/slider/Slider";
 import Map from "../../components/map/Map";
-import { singlePostData, userData } from "../../lib/dummydata";
+import { singlePostData } from "../../lib/dummydata";
 
-function SinglePage() {
+
+function SingleMyOffrePage() {
   return (
     <div className="singlePage">
+       {/* Details offre */}
       <div className="details">
         <div className="wrapper">
           <Slider images={singlePostData.images} />
@@ -19,15 +21,21 @@ function SinglePage() {
                 </div>
                 <div className="price">$ {singlePostData.price}</div>
               </div>
-              <div className="user">
-                <img src={userData.img} alt="" />
-                <span>{userData.name}</span>
+
+              <div className="buttons">
+                <button>Update</button>
+                <button>Delete</button>
               </div>
+
             </div>
             <div className="bottom">{singlePostData.description}</div>
           </div>
         </div>
+
+    
       </div>
+
+      {/* Part General */}
       <div className="features">
         <div className="wrapper">
           <p className="title">General</p>
@@ -98,19 +106,13 @@ function SinglePage() {
             <Map items={[singlePostData]} />
           </div>
           <div className="buttons">
-            <button>
-              <img src="/chat.png" alt="" />
-              Send a Message
-            </button>
-            <button>
-              <img src="/save.png" alt="" />
-              Save the Place
-            </button>
+         
           </div>
         </div>
       </div>
+
     </div>
   );
 }
 
-export default SinglePage;
+export default SingleMyOffrePage;

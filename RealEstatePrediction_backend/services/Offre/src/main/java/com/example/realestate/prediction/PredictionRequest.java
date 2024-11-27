@@ -1,10 +1,13 @@
 package com.example.realestate.prediction;
 
 
+import java.time.LocalDate;
+
 public record PredictionRequest(
         String city,
-        String date_to_predict,
-        int current_price
+        LocalDate date_to_predict,
+        double current_price
+
 ) {
 
 }

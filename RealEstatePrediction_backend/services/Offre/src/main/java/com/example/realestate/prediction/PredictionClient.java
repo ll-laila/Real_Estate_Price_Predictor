@@ -8,10 +8,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @FeignClient(
-        name = "",
-        url = ""
+        name = "prediction-service",
+        url = "http://localhost:8000"
 )
 public interface PredictionClient {
 
+    @PostMapping("/api/predict/")
+    ResponseEntity<PredictionResponse> predictHousePrice(@RequestBody PredictionRequest request);
 
 }
