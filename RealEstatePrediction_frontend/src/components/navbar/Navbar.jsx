@@ -19,7 +19,7 @@ function Navbar() {
             <a href="/">Home</a>
             <a href="/Offres">Offres</a>
             <a href="/Myspace">My space</a>
-            <a href="/Other">{test}</a>
+            <a href="/Other">Other</a>
           </div>
           <div className="right">
             <div className="user">
