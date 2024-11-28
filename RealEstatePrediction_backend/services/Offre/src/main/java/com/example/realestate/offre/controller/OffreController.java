@@ -43,9 +43,9 @@ public class OffreController {
         return ResponseEntity.ok(offreService.createOfferWithImmobilier(request));
     }
 
-    @PutMapping
-    public ResponseEntity<String> updateOfferWithImmobilier(@RequestBody OffreRequest request) {
-        return ResponseEntity.ok(offreService.updateOfferWithImmobilier(request));
+    @PutMapping("/{offreId}")
+    public ResponseEntity<String> updateOfferWithImmobilier(@RequestBody OffreRequest request, @PathVariable String offreId) {
+        return ResponseEntity.ok(offreService.updateOfferWithImmobilier(request, offreId));
     }
 
 
@@ -77,6 +77,12 @@ public class OffreController {
     @PostMapping("/PredictHousePrice")
     ResponseEntity<PredictionResponse> predictHousePrice(@RequestBody PredictionRequest request){
         return ResponseEntity.ok(predictionClient.predictHousePrice(request).getBody());
+    }
+
+    //get offers by user id
+    @GetMapping("/allOffers/{userId}")
+    public ResponseEntity<List<OffreResponse>> getOffresByUserId(@PathVariable("userId") String userId) {
+        return ResponseEntity.ok(offreService.findOffersByUserId(userId));
     }
 
 

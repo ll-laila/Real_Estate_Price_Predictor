@@ -22,4 +22,5 @@ public class Offre {
     private Immobilier immobilier;
     private String userId;
     private LocalDate dateDePublication;
+    private LocalDate dateDeUpdate;
 }
