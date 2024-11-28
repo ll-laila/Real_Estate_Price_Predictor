@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e73203a-234d-49c0-8538-4aef139b8ac0" name="Changes" comment="" />
+    <list default="true" id="2e73203a-234d-49c0-8538-4aef139b8ac0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/controller/OffreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/controller/OffreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/entity/Immobilier.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/entity/Immobilier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/entity/Offre.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/entity/Offre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/mapper/ImmobilierMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/mapper/ImmobilierMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/mapper/OffreMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/mapper/OffreMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/repository/OffreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/repository/OffreRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/request/ImmobilierRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/request/ImmobilierRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/request/OffreRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/request/OffreRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/response/ImmobilierResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/response/ImmobilierResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/response/OffreResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/response/OffreResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/service/OffreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/service/OffreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/MyOffresList/MyList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/MyOffresList/MyList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/cardMyOffre/cardMyOffre.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/cardMyOffre/cardMyOffre.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/newPostPage/newPostPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/newPostPage/newPostPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/newPostPage/newPostPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/newPostPage/newPostPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/services/OffreService.js" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/services/OffreService.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,31 +31,145 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Ismailchaoufi&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ll-laila/Real_Estate_Price_Predictor.git&quot;,
+    &quot;accountId&quot;: &quot;fee2b4cf-a29a-4466-8509-20ad8cd0ccf0&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2pOezp82X0n3R6osBxm5rEqyD32" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.RealEstatePrediction_backend: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ConfigServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.DiscoveryApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.OffreApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.PaymentApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserApplication.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/S5/PROJET_AI_ATLASS/Real_Estate_Price_Predictor/RealEstatePrediction_backend/services/User&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Docker.RealEstatePrediction_backend: Compose Deployment">
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="config-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.config_server.ConfigServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscoveryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="discovery" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.discovery.DiscoveryApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.realestate.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OffreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Offre" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.realestate.OffreApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Payment" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.realestate.PaymentApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="User" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.realestate.UserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RealEstatePrediction_backend: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="RealEstatePrediction_backend/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.RealEstatePrediction_backend: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -47,6 +179,8 @@
       <option name="presentableId" value="Default" />
       <updated>1732641828624</updated>
       <workItem from="1732641835772" duration="654000" />
+      <workItem from="1732732260244" duration="12333000" />
+      <workItem from="1732784213252" duration="7387000" />
     </task>
     <servers />
   </component>
