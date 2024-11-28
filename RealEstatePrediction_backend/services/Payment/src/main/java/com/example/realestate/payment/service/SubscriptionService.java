@@ -12,6 +12,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import static java.lang.String.format;
 
 
@@ -32,7 +35,7 @@ public class SubscriptionService {
 
         if (request == null) return null;
 
-        PlanResponse plan = planService.findByIdPlan(request.id());
+        PlanResponse plan = planService.findByIdPlan(request.planId());
         if (plan == null) {
             throw new NotFoundException("Unknown Given plan");
         }
@@ -73,6 +76,13 @@ public class SubscriptionService {
         return null;
     }
 
+
+    public List<SubscriptionResponse> SubscriptionList(){
+        return subscriptionRepository.findAll()
+                .stream()
+                .map(subscriptionMapper :: fromSubscription)
+                .collect(Collectors.toList());
+    }
 
 
 }

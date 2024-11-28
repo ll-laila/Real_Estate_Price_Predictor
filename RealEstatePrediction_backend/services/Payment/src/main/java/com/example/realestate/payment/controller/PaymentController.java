@@ -81,4 +81,11 @@ public class PaymentController {
         return ResponseEntity.ok(subscriptionService.updateUserSubscription(subscriptionRequest));
     }
 
+    @GetMapping("/allSubscriptions")
+    public ResponseEntity<List<SubscriptionResponse>> findAllSubscriptions()
+    {
+        return ResponseEntity.ok(subscriptionService.SubscriptionList());
+    }
+
+
 }

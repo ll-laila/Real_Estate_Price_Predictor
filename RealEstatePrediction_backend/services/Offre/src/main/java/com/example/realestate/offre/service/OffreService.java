@@ -122,7 +122,7 @@ public class OffreService {
                 .map(OffreMapper::fromOffre)
                 .collect(Collectors.toList());
     }
-    //get offers fro spécifique user
+    //get offers for spécifique user
     public List<OffreResponse> findOffersByUserId(String userId) {
         List<Offre> offers = offreRepository.findOffreByUserId(userId);
 

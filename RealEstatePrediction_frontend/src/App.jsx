@@ -14,6 +14,7 @@ import MyOffresPage from "./routes/MyOffres/MyOffresPage";
 import OtherPage from "./routes/Other/OtherPage";
 import NewPostPage from "./routes/newPostPage/newPostPage";
 import ProfileUpdatePage from "./routes/profileUpdatePage/profileUpdatePage";
+import Prediction from "./routes/prediction/Prediction";
 
 
 function App() {
@@ -65,6 +66,10 @@ function App() {
         {
           path:"/register",
           element:<Register/>
+        },
+        {
+          path:"/prediction",
+          element:<Prediction/>
         }
       ]
     }
