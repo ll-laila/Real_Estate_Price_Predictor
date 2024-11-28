@@ -11,7 +11,7 @@ class OffreService {
     });
   }
 
-  getOffers() {
+  getAllOffres() {
       return axios.get(OFFRE_API_BASE_URL + "/allOffers");
     }
 
