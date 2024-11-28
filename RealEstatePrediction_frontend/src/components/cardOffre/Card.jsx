@@ -29,6 +29,11 @@ function Card({ item }) {
           </div>
           <div className="icons">
             <div className="icon">
+              <Link to="/prediction">
+                <img src="/prediction.png" alt="" />
+              </Link>
+            </div>
+            <div className="icon">
               <img src="/save.png" alt="" />
             </div>
             <div className="icon">
