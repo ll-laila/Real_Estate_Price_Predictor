@@ -32,7 +32,7 @@ public class SubscriptionService {
 
         if (request == null) return null;
 
-        PlanResponse plan = planService.findByIdPlan(request.id());
+        PlanResponse plan = planService.findByIdPlan(request.planId());
         if (plan == null) {
             throw new NotFoundException("Unknown Given plan");
         }
