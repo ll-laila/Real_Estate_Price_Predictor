@@ -26,15 +26,15 @@ public class ImmobilierMapper {
                 .description(request.description())
                 .latitude(request.latitude())
                 .longitude(request.longitude())
-                .type(request.type())                  // Mapping new fields
-                .property(request.property())          // Mapping new fields
-                .utilities(request.utilities())        // Mapping new fields
-                .petPolicy(request.petPolicy())        // Mapping new fields
-                .incomePolicy(request.incomePolicy())  // Mapping new fields
-                .size(request.size())                  // Mapping new fields
-                .schoolDistance(request.schoolDistance()) // Mapping new fields
-                .busDistance(request.busDistance())    // Mapping new fields
-                .restaurantDistance(request.restaurantDistance()) // Mapping new fields
+                .type(request.type())                  
+                .property(request.property())          
+                .utilities(request.utilities())        
+                .petPolicy(request.petPolicy())        
+                .incomePolicy(request.incomePolicy())  
+                .size(request.size())                  
+                .schoolDistance(request.schoolDistance()) 
+                .busDistance(request.busDistance())    
+                .restaurantDistance(request.restaurantDistance()) 
                 .build();
     }
 
@@ -52,15 +52,15 @@ public class ImmobilierMapper {
                 immobilier.getLatitude(),
                 immobilier.getLongitude(),
                 immobilier.getDescription(),
-                immobilier.getType(),                 // Include new fields if needed
-                immobilier.getProperty(),             // Include new fields if needed
-                immobilier.getUtilities(),            // Include new fields if needed
-                immobilier.getPetPolicy(),            // Include new fields if needed
-                immobilier.getIncomePolicy(),         // Include new fields if needed
-                immobilier.getSize(),                 // Include new fields if needed
-                immobilier.getSchoolDistance(),       // Include new fields if needed
-                immobilier.getBusDistance(),          // Include new fields if needed
-                immobilier.getRestaurantDistance()    // Include new fields if needed
+                immobilier.getType(),                 
+                immobilier.getProperty(),             
+                immobilier.getUtilities(),            
+                immobilier.getPetPolicy(),            
+                immobilier.getIncomePolicy(),         
+                immobilier.getSize(),                 
+                immobilier.getSchoolDistance(),       
+                immobilier.getBusDistance(),          
+                immobilier.getRestaurantDistance()    
         );
     }
 }
