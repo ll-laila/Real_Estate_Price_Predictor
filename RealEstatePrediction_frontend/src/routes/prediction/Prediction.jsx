@@ -8,7 +8,7 @@ function Prediction() {
   const [city, setCity] = useState("");
   const [price, setPrice] = useState("");
   const [dateToPredict, setDateToPredict] = useState("");
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
 
   const handleSubmit = (e) => {
     e.preventDefault();
