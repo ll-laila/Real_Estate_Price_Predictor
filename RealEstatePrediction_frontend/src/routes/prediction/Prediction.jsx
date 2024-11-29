@@ -30,7 +30,7 @@ function Prediction() {
     <>
       {show ? (
         <div className="App">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="form22">
             <fieldset>
               <h2>Predict real estate price</h2>
               <div className="Field">

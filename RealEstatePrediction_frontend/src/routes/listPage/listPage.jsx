@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import OffreService from "../../services/offreService";
+import OffreService from "../../services/OffreService";
 import Card from "../../components/cardOffre/Card";
 import Map from "../../components/map/Map";
 import Filter from "../../components/filter/Filter";
@@ -33,7 +33,8 @@ const ListPage = () => {
   return (
     <div className="listPage">
       <div className="listContainer">
-        <div className="wrapper">        <Filter/>
+        <div className="wrapper">       
+         <Filter/>
           {offres && offres.length > 0 ? (
             offres.map((offre) => {
               const { immobilierResponse } = offre;

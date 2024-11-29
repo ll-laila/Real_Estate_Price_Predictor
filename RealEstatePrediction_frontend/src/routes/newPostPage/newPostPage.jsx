@@ -399,7 +399,6 @@ function NewPostPage() {
           </form>
         </div>
       </div>
-      <div className="sideContainer"></div>
     </div>
   );
 }
