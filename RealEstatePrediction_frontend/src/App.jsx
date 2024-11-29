@@ -68,7 +68,7 @@ function App() {
           element:<Register/>
         },
         {
-          path:"/prediction",
+          path:"/prediction/:id",
           element:<Prediction/>
         },
         {

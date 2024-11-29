@@ -14,7 +14,7 @@ import org.springframework.data.annotation.Id;
 public class Subscription {
     @Id
     private String id;
-    private String planId;
+    private String namePlan;
     private String userId;
     private int nbrPrediction;
 }

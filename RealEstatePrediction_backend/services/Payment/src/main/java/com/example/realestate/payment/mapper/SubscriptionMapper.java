@@ -13,7 +13,7 @@ public class SubscriptionMapper {
         }
         return Subscription.builder()
                 .id(request.id())
-                .planId(request.planId())
+                .namePlan(request.namePlan())
                 .userId(request.userId())
                 .nbrPrediction(request.nbrPrediction())
                 .build();
@@ -23,7 +23,7 @@ public class SubscriptionMapper {
 
         return new SubscriptionResponse(
                 subscription.getId(),
-                subscription.getPlanId(),
+                subscription.getNamePlan(),
                 subscription.getUserId(),
                 subscription.getNbrPrediction()
         );

@@ -4,7 +4,15 @@ const OFFRE_API_BASE_URL = "http://localhost:8222/api/v1/offres";
 
 class OffreService {
   saveOffer(offer) {
-    return axios.post("http://localhost:8050/api/v1/offres", offer, {
+    return axios.post(OFFRE_API_BASE_URL , offer, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  }
+
+  predictPrice(PredictionRequest) {
+    return axios.post(OFFRE_API_BASE_URL +"/PredictHousePrice", PredictionRequest, {
       headers: {
         'Content-Type': 'application/json',
       },

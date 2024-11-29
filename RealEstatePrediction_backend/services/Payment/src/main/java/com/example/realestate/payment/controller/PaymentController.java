@@ -41,7 +41,7 @@ public class PaymentController {
     }
 
 
-    @GetMapping("/{planName}")
+    @GetMapping("/planName/{planName}")
     public ResponseEntity<PlanResponse> findByName(
             @PathVariable("planName") String planName)
     {
@@ -59,14 +59,14 @@ public class PaymentController {
 
 
     //---------------------------Subscriptions--------------------------------//
-
+    
     @PostMapping("/createSubscription")
     public ResponseEntity<String> createSubscription(@RequestBody @Valid SubscriptionRequest subscriptionRequest) {
         return ResponseEntity.ok(subscriptionService.createSubscription(subscriptionRequest));
     }
 
 
-    @GetMapping("/{idUser}")
+    @GetMapping("/userSub/{idUser}")
     public ResponseEntity<SubscriptionResponse> findUserSubscriptionB(
             @PathVariable("idUser") String idUser)
     {
@@ -87,5 +87,12 @@ public class PaymentController {
         return ResponseEntity.ok(subscriptionService.SubscriptionList());
     }
 
+    @DeleteMapping("/subscription/{user-id}")
+    public ResponseEntity<Void> deleteByIdUser(
+            @PathVariable("user-id") String userId)
+    {
+        subscriptionService.deleteUserSubscription(userId);
+        return ResponseEntity.accepted().build();
+    }
 
 }

@@ -35,13 +35,13 @@ public class SubscriptionService {
 
         if (request == null) return null;
 
-        PlanResponse plan = planService.findByIdPlan(request.planId());
+        PlanResponse plan = planService.getPlanByName(request.namePlan());
         if (plan == null) {
             throw new NotFoundException("Unknown Given plan");
         }
 
         Subscription subscription = Subscription.builder()
-                .planId(request.planId())
+                .namePlan(request.namePlan())
                 .userId(request.userId())
                 .nbrPrediction(plan.maxPrediction())
                 .build();
@@ -64,7 +64,7 @@ public class SubscriptionService {
         var subExist = getSubscriptionByIdUser(subscriptionRequest.userId());
         if (subExist != null) {
             Subscription subscription = Subscription.builder()
-                    .planId(subscriptionRequest.planId())
+                    .namePlan(subscriptionRequest.namePlan())
                     .userId(subscriptionRequest.userId())
                     .nbrPrediction(subscriptionRequest.nbrPrediction())
                     .build();
@@ -82,6 +82,10 @@ public class SubscriptionService {
                 .stream()
                 .map(subscriptionMapper :: fromSubscription)
                 .collect(Collectors.toList());
+    }
+
+    public void deleteUserSubscription(String userId) {
+        subscriptionRepository.deleteById(getSubscriptionByIdUser(userId).id());
     }
 
 
