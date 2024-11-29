@@ -15,7 +15,7 @@ import OtherPage from "./routes/Other/OtherPage";
 import NewPostPage from "./routes/newPostPage/newPostPage";
 import ProfileUpdatePage from "./routes/profileUpdatePage/profileUpdatePage";
 import Prediction from "./routes/prediction/Prediction";
-
+import Completion from "./components/payment/Completion";
 
 function App() {
   const router = createBrowserRouter([
@@ -70,6 +70,10 @@ function App() {
         {
           path:"/prediction",
           element:<Prediction/>
+        },
+        {
+          path:"/completion",
+          element:<Completion/>
         }
       ]
     }

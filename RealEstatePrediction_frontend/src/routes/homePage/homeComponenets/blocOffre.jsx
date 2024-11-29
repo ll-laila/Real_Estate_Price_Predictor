@@ -1,4 +1,4 @@
-import "../homePage.scss";
+
 
 function BlocOffre() {
   return (

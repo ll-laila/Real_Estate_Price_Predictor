@@ -1,0 +1,110 @@
+@use "../../responsive.scss" as *;
+
+
+.App {
+    display: flex;
+    justify-content: flex-start; /* Aligns the form to the left */
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+  }
+
+  h2{
+    padding-bottom: 7%;
+  }
+
+
+  .pdn{
+    padding-left: 1%;
+    margin-left: 10%;
+  }
+
+  form {
+    margin-bottom: 10%;
+    width: 580px;
+    padding: 16px;
+    border: 1px  #ccc;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 20px 20px 20px 20px  rgba(0, 0, 0, 0.1); /* Apply shadow to the form */
+  }
+  
+  fieldset {
+    display: flex;
+    width: 100%; /* Ensure the fieldset takes up the full width of the form */
+    padding: 16px;
+    border: none; /* Removed border to apply shadow to the form itself */
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  
+  sup {
+    color: red;
+    top: -2px;
+    font-size: 95%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  input,
+  select {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    height: 32px;
+    padding: 0 8px;
+  }
+  
+  .Field {
+    position: relative;
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  button {
+    padding: 12px;
+    width: 240px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fece51;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+  }
+  
+  .imgContainer {
+    flex: 2;
+    background-color: #fcf5f3;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @include md {
+      display: none;
+    }
+
+    img {
+      width: 115%;
+      position: absolute;
+      right: 0;
+
+      @include lg {
+        width: 105%;
+      }
+    }
+  }

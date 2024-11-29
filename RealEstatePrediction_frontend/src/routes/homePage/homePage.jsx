@@ -13,7 +13,7 @@ function HomePage() {
           to buy or rent, and discover unique opportunities tailored to your lifestyle. 
           Trust our expertise to guide you through every step of your real estate journey.
           </p>
-          <SearchBar />
+          
           <div className="boxes">
             <div className="box">
               <h1>16+</h1>
