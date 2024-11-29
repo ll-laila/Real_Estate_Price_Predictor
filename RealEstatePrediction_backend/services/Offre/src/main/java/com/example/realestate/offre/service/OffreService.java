@@ -53,6 +53,7 @@ public class OffreService {
         offre.setUserId(offreRequest.userId());
         offre.setImmobilier(savedImmobilier);
         offre.setDateDePublication(LocalDate.now());
+        offre.setDateDeUpdate(LocalDate.now());
 
         Offre savedOffre = offreRepository.save(offre);
 
@@ -63,46 +64,31 @@ public class OffreService {
 
 
     @Transactional(rollbackFor = Exception.class)
-    public String updateOfferWithImmobilier(OffreRequest offreRequest) {
+    public String updateOfferWithImmobilier(OffreRequest offreRequest, String offreId) {
 
-        Offre existingOffre = offreRepository.findById(offreRequest.id())
-                .orElseThrow(() -> new BusinessException("Offre introuvable pour l'ID : " + offreRequest.id()));
+        Offre existingOffre = offreRepository.findById(offreId)
+                .orElseThrow(() -> new RuntimeException("Offer not found with id: " + offreId));
 
         var user = this.userClient.findById(offreRequest.userId());
         if (user == null) {
             log.error("Utilisateur non trouvé pour l'ID : {}", offreRequest.userId());
             throw new BusinessException("Utilisateur introuvable pour l'ID fourni.");
         }
-
-        Immobilier immobilier;
-        if (offreRequest.immobilierRequest().id() != null) {
-
-            immobilier = immobilierRepository.findById(offreRequest.immobilierRequest().id())
-                    .orElseThrow(() -> new BusinessException("Immobilier introuvable pour l'ID : " + offreRequest.immobilierRequest().id()));
-            immobilier = ImmobilierMapper.toImmobilier(offreRequest.immobilierRequest());
-
-            immobilier.setTitle(offreRequest.immobilierRequest().title());
-            immobilier.setImg(offreRequest.immobilierRequest().img());
-            immobilier.setPrice(offreRequest.immobilierRequest().price());
-            immobilier.setBedroom(offreRequest.immobilierRequest().bedroom());
-            immobilier.setBathroom(offreRequest.immobilierRequest().bathroom());
-            immobilier.setAddress(offreRequest.immobilierRequest().address());
-            immobilier.setCity(offreRequest.immobilierRequest().city());
-            immobilier.setLatitude(offreRequest.immobilierRequest().latitude());
-            immobilier.setLongitude(offreRequest.immobilierRequest().longitude());
-
-        } else {
-            immobilier = ImmobilierMapper.toImmobilier(offreRequest.immobilierRequest());
+        if (!existingOffre.getUserId().equals(offreRequest.userId())) {
+            throw new RuntimeException("You are not authorized to update this offer.");
         }
+        existingOffre.setDateDeUpdate(LocalDate.now());
+        // Update immobilier
+        Immobilier updatedImmobilier = ImmobilierMapper.toImmobilier(offreRequest.immobilierRequest());
+        if (updatedImmobilier != null) {
+            updatedImmobilier.setId(existingOffre.getImmobilier().getId()); // Preserve original ID
+            immobilierRepository.save(updatedImmobilier); // Save updated immobilier
+            existingOffre.setImmobilier(updatedImmobilier); // Associate updated immobilier
+        }
+        // Save updated offer
+        Offre savedOffre = offreRepository.save(existingOffre);
 
-        Immobilier savedImmobilier = immobilierRepository.save(immobilier);
-
-        existingOffre.setImmobilier(savedImmobilier);
-        existingOffre.setUserId(offreRequest.userId());
-        existingOffre.setDateDePublication(offreRequest.dateDePublication());
-        Offre updatedOffre = offreRepository.save(existingOffre);
-
-        return updatedOffre.getId();
+        return savedOffre.getId();
     }
 
 
@@ -136,6 +122,20 @@ public class OffreService {
                 .map(OffreMapper::fromOffre)
                 .collect(Collectors.toList());
     }
+    //get offers for spécifique user
+    public List<OffreResponse> findOffersByUserId(String userId) {
+        List<Offre> offers = offreRepository.findOffreByUserId(userId);
+
+        if (offers.isEmpty()) {
+            log.warn("No offers found for user ID: {}", userId);
+            throw new BusinessException("Aucune offre trouvée pour l'utilisateur avec l'ID : " + userId);
+        }
+
+        return offers.stream()
+                .map(OffreMapper::fromOffre)
+                .collect(Collectors.toList());
+    }
+
 
 
 }
