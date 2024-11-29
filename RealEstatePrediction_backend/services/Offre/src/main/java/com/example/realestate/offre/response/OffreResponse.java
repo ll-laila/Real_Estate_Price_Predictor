@@ -6,6 +6,7 @@ public record OffreResponse(
         String id,
         ImmobilierResponse immobilierResponse,
         String userId,
-        LocalDate dateDePublication
+        LocalDate dateDePublication,
+        LocalDate dateDeUpdate
 ) {
 }

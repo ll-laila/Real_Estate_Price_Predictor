@@ -3,30 +3,32 @@ import axios from "axios";
 const OFFRE_API_BASE_URL = "http://localhost:8222/api/v1/offres";
 
 class OffreService {
-  // Récupérer toutes les offres
+  saveOffer(offer) {
+    return axios.post("http://localhost:8050/api/v1/offres", offer, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  }
+
   getAllOffres() {
-    return axios.get(`${OFFRE_API_BASE_URL}/allOffers`);
+      return axios.get(OFFRE_API_BASE_URL + "/allOffers");
+    }
+
+  getOffersByUser(userId) {
+      return axios.get(OFFRE_API_BASE_URL + "/allOffers/" + userId);
   }
 
-  // Créer une nouvelle offre
-  createOffre(offreData) {
-    return axios.post(OFFRE_API_BASE_URL, offreData);
+  updateOffer(offer, offerId) {
+      return axios.put(OFFRE_API_BASE_URL, offer, offerId);
   }
 
-  // Récupérer une offre par ID
-  getOffreById(offreId) {
-    return axios.get(`${OFFRE_API_BASE_URL}/${offreId}`);
+  deleteOffer(id) {
+      return axios.delete(OFFRE_API_BASE_URL + "/" + id);
   }
-
-  // Mettre à jour une offre
-  updateOffre(offreId, offreData) {
-    return axios.put(`${OFFRE_API_BASE_URL}/${offreId}`, offreData);
-  }
-
-  // Supprimer une offre
-  deleteOffre(offreId) {
-    return axios.delete(`${OFFRE_API_BASE_URL}/${offreId}`);
+  getOfferById(offerId) {
+    return axios.get(OFFRE_API_BASE_URL + "/" + offerId);
   }
 }
 
-export default new OffreService();
+export default new OffreService ();

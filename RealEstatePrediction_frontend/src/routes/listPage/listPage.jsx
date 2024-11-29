@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import OffreService from "C:/Users/pc/Documents/Projects/Real_Estate_Price_Predictor/RealEstatePrediction_frontend/src/services/OffreService.js";
+import OffreService from "../../services/OffreService";
 import Card from "../../components/cardOffre/Card";
 import Map from "../../components/map/Map";
 import Filter from "../../components/filter/Filter";
+import "./listPage.scss";
+
 
 const ListPage = () => {
   const [offres, setOffres] = useState([]);
@@ -31,7 +33,8 @@ const ListPage = () => {
   return (
     <div className="listPage">
       <div className="listContainer">
-        <div className="wrapper">        <Filter/>
+        <div className="wrapper">       
+         <Filter/>
           {offres && offres.length > 0 ? (
             offres.map((offre) => {
               const { immobilierResponse } = offre;
@@ -57,8 +60,7 @@ const ListPage = () => {
       </div>
 
       <div className="mapContainer">
-        {/* Ensure to pass the correct data to the Map component */}
-
+        <Map items={offres}/>
       </div>
     </div>
   );

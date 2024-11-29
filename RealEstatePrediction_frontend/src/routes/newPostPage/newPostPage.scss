@@ -1,6 +1,7 @@
 .newPostPage {
   height: 100%;
   display: flex;
+  padding-top: 4%;
 
   .formContainer {
     flex: 3;
@@ -29,6 +30,16 @@
             border-radius: 5px;
             border: 1px solid gray;
           }
+          textarea {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            resize: vertical; // Allows vertical resizing only
+            transition: border-color 0.3s;
+          }
 
           select {
             padding: 19px;
@@ -46,6 +57,7 @@
         }
         .sendButton {
           width: 30%;
+          height: 80px;
           border-radius: 5px;
           border: none;
           background-color: teal;
