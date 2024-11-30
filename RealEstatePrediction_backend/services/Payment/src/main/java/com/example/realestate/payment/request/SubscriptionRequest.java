@@ -8,7 +8,7 @@ import lombok.Setter;
 
 public record SubscriptionRequest(
         String id,
-        String planId,
+        String namePlan,
         String userId,
         int nbrPrediction
 ) {
