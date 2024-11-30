@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import OffreService from "C:/Users/pc/Documents/Projects/Real_Estate_Price_Predictor/RealEstatePrediction_frontend/src/services/OffreService.js";
+import OffreService from "../../services/OffreService";
 import Card from "../../components/cardOffre/Card";
 import Map from "../../components/map/Map";
 import Filter from "../../components/filter/Filter";

@@ -25,7 +25,7 @@ function MyList(){
   }, [userId]);
 
   if (loading) {
-    return <p>Chargement des offres...</p>;
+    return <p>Offers Loading...</p>;
   }
 
   if (error) {

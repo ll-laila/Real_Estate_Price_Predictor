@@ -50,7 +50,7 @@ public class OffreController {
 
 
     @DeleteMapping("/{offreId}")
-    public ResponseEntity<String> deleteOfferWithImmobilier(@PathVariable Long offreId) {
+    public ResponseEntity<String> deleteOfferWithImmobilier(@PathVariable String offreId) {
         try {
             offreService.deleteOfferWithImmobilier(String.valueOf(offreId));
             return new ResponseEntity<>("Offer and its associated immobilier deleted successfully", HttpStatus.NO_CONTENT);

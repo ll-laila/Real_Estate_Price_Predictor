@@ -15,6 +15,7 @@ import OtherPage from "./routes/Other/OtherPage";
 import NewPostPage from "./routes/newPostPage/newPostPage";
 import ProfileUpdatePage from "./routes/profileUpdatePage/profileUpdatePage";
 import Prediction from "./routes/prediction/Prediction";
+import UpdatePostPage from "./routes/updatePostPage/updatePostPage";
 
 
 function App() {
@@ -50,6 +51,10 @@ function App() {
         {
           path:"/AddOffre",
           element:<NewPostPage/>
+        },
+        {
+          path:"/UpdateOffre/:id",
+          element:<UpdatePostPage/>
         },
         {
           path:"/profile",
