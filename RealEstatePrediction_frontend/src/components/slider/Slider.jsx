@@ -28,6 +28,7 @@ function Slider({ images }) {
             <img src="/arrow.png" alt="" />
           </div>
           <div className="imgContainer">
+            {console.log(images[imageIndex])}
             <img src={images[imageIndex]} alt="" />
           </div>
           <div className="arrow" onClick={() => changeSlide("right")}>

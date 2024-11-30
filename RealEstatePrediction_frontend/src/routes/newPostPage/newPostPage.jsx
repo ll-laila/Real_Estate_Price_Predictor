@@ -19,7 +19,7 @@
       description: '',
       type: 'rent',
       property: 'apartment',
-      utilities: 'owner',
+      utilities: 'owner is responsible',
       petPolicy: 'allowed',
       incomePolicy: '',
       size: '',
