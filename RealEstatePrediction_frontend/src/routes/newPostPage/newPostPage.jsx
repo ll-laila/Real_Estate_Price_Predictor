@@ -2,10 +2,12 @@
   import { useNavigate } from 'react-router-dom';
   import "./newPostPage.scss";
   import OffreService from '../../services/OffreService';
+  import { popularCities } from "../../lib/dummydata";
 
   function NewPostPage() {
     const navigate = useNavigate();
     const [isSubmitting, setIsSubmitting] = useState(false);
+
     const [formData, setFormData] = useState({
       title: '',
       price: '',
@@ -249,14 +251,20 @@
               </div>
               <div className="item">
                 <label htmlFor="city">City</label>
-                <input 
+                <select 
                   id="city" 
                   name="city" 
-                  type="text" 
                   value={formData.city}
                   onChange={handleChange}
-                  required 
-                />
+                  required
+                >
+                  <option value="">-- Select a City --</option>
+                  {popularCities.map((city, index) => (
+                    <option key={index} value={city}>
+                      {city}
+                    </option>
+                  ))}
+                </select>
               </div>
               <div className="item">
                 <label htmlFor="bedroom">Bedroom Number</label>
@@ -375,6 +383,7 @@
                   placeholder="Income Policy"
                   value={formData.incomePolicy}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="item">
@@ -398,6 +407,7 @@
                   type="number" 
                   value={formData.schoolDistance}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="item">
@@ -409,6 +419,7 @@
                   type="number" 
                   value={formData.busDistance}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="item">
@@ -420,6 +431,7 @@
                   type="number" 
                   value={formData.restaurantDistance}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <button type="submit" className="sendButton" disabled={isSubmitting}>

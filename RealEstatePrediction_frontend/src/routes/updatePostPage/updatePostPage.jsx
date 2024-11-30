@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import "./updatePostPage.scss";
 import OffreService from '../../services/OffreService';
+import { popularCities } from "../../lib/dummydata";
 
 function UpdatePostPage() {
   const navigate = useNavigate();
@@ -160,7 +161,7 @@ function UpdatePostPage() {
   
 
   return (
-    <div className="newPostPage">
+    <div className="updatePostPage">
       <div className="formContainer">
         <h1>Update Post</h1>
         <div className="wrapper">
@@ -238,15 +239,23 @@ function UpdatePostPage() {
             </div>
             <div className="item">
               <label htmlFor="city">City</label>
-              <input 
+              <select 
                 id="city" 
                 name="city" 
-                type="text" 
-                value={offerRequest.city}
+                value={offerRequest.city} // Prepopulate with the current value
                 onChange={handleChange}
-                required 
-              />
+                required
+              >
+                {/* Default option showing the currently selected city */}
+                <option value="">-- Select a City --</option>
+                {popularCities.map((city, index) => (
+                  <option key={index} value={city}>
+                    {city}
+                  </option>
+                ))}
+              </select>
             </div>
+
             <div className="item">
               <label htmlFor="bedroom">Bedroom Number</label>
               <input 

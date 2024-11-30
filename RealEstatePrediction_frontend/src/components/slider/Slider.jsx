@@ -24,19 +24,19 @@ function Slider({ images }) {
     <div className="slider">
       {imageIndex !== null && (
         <div className="fullSlider">
-          <div className="arrow" onClick={() => changeSlide("left")}>
-            <img src="/arrow.png" alt="" />
+          <div className="arrow left" onClick={() => changeSlide("left")}>
+            <img src="/arrow.png" alt="Left Arrow" />
           </div>
+        
           <div className="imgContainer">
-            {console.log(images[imageIndex])}
-            <img src={images[imageIndex]} alt="" />
+            <img src={images[imageIndex]} alt={`Slide ${imageIndex + 1}`} />
           </div>
-          <div className="arrow" onClick={() => changeSlide("right")}>
-            <img src="/arrow.png" className="right" alt="" />
+        
+          <div className="arrow right" onClick={() => changeSlide("right")}>
+            <img src="/arrow.png" alt="Right Arrow" />
           </div>
-          <div className="close" onClick={() => setImageIndex(null)}>
-            X
-          </div>
+        
+          <div className="close" onClick={() => setImageIndex(null)}>X</div>
         </div>
       )}
       <div className="bigImage">
