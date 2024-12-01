@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
 
-  const user = false;
+  const user = true;
   
   return (
       <nav>
