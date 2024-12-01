@@ -5,13 +5,13 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/RealEstatePrediction_backend/services/config-server/pom.xml" />
-        <option value="$PROJECT_DIR$/RealEstatePrediction_backend/services/Gateway/pom.xml" />
         <option value="$PROJECT_DIR$/RealEstatePrediction_backend/services/discovery/pom.xml" />
+        <option value="$PROJECT_DIR$/RealEstatePrediction_backend/services/Gateway/pom.xml" />
         <option value="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/pom.xml" />
         <option value="$PROJECT_DIR$/RealEstatePrediction_backend/services/Payment/pom.xml" />
         <option value="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_22" default="true" project-jdk-name="openjdk-22" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="openjdk-22" project-jdk-type="JavaSDK" />
 </project>

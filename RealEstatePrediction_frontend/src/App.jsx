@@ -16,6 +16,7 @@ import NewPostPage from "./routes/newPostPage/newPostPage";
 import ProfileUpdatePage from "./routes/profileUpdatePage/profileUpdatePage";
 import Prediction from "./routes/prediction/Prediction";
 import UpdatePostPage from "./routes/updatePostPage/updatePostPage";
+import Home from "./routes/Home/home.jsx";
 
 
 function App() {
@@ -26,6 +27,10 @@ function App() {
       children:[
         {
           path:"/",
+          element:<Home/>
+        },
+        {
+          path:"/HomePage",
           element:<HomePage/>
         },
         {
@@ -61,7 +66,7 @@ function App() {
           element:<ProfilePage/>
         },
         {
-          path:"/Updateprofile",
+          path:"/Updateprofile/:userId",
           element:<ProfileUpdatePage/>
         },
         {
