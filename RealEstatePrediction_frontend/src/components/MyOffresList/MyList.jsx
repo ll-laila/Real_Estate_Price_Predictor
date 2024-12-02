@@ -1,7 +1,8 @@
 import './Mylist.scss'
 import { useState, useEffect } from "react";
-import CardMyOffre from "../cardMyOffre/cardMyOffre"
+import CardMyOffre from "../cardMyOffre/cardMyOffre";
 import OffreService from "../../services/OffreService";
+import "./MyList.scss";
 import {listData} from "../../lib/dummydata"
 
 function MyList(){
@@ -25,7 +26,7 @@ function MyList(){
   }, [userId]);
 
   if (loading) {
-    return <p>Chargement des offres...</p>;
+    return <p>Offers Loading...</p>;
   }
 
   if (error) {

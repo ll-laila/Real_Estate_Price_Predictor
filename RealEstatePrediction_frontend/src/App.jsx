@@ -15,7 +15,9 @@ import OtherPage from "./routes/Other/OtherPage";
 import NewPostPage from "./routes/newPostPage/newPostPage";
 import ProfileUpdatePage from "./routes/profileUpdatePage/profileUpdatePage";
 import Prediction from "./routes/prediction/Prediction";
-import Completion from "./components/payment/Completion";
+import UpdatePostPage from "./routes/updatePostPage/updatePostPage";
+import Home from "./routes/Home/home.jsx";
+
 
 function App() {
   const router = createBrowserRouter([
@@ -25,6 +27,10 @@ function App() {
       children:[
         {
           path:"/",
+          element:<Home/>
+        },
+        {
+          path:"/HomePage",
           element:<HomePage/>
         },
         {
@@ -52,11 +58,15 @@ function App() {
           element:<NewPostPage/>
         },
         {
+          path:"/UpdateOffre/:id",
+          element:<UpdatePostPage/>
+        },
+        {
           path:"/profile",
           element:<ProfilePage/>
         },
         {
-          path:"/Updateprofile",
+          path:"/Updateprofile/:userId",
           element:<ProfileUpdatePage/>
         },
         {
@@ -70,10 +80,6 @@ function App() {
         {
           path:"/prediction",
           element:<Prediction/>
-        },
-        {
-          path:"/completion",
-          element:<Completion/>
         }
       ]
     }

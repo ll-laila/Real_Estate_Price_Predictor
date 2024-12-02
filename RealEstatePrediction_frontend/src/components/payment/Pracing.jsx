@@ -3,15 +3,57 @@ import "./Pracing.scss";
 import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "./CheckoutForm";
 import { loadStripe } from "@stripe/stripe-js";
+import PaymentService from "../../services/PaymentService";
 
-function Pracing() {
+function Pracing({ userId }) {
+  const user = "6749a2da6dc00c756ad0d6d1";
   const [showForm, setShowForm] = useState(true);
   const [pricePlan, setPricePlan] = useState(0);
-
-  const handleSubscribe = (price) => {
+  const [namePlan, setNamePlan] = useState("");
+  const [subscriptionData, setSubscriptionData] = useState(null); 
+  const [error, setError] = useState("");  
+  
+  const handleSubscribe = (price, name) => {
     setPricePlan(price);
+    setNamePlan(name);
     setShowForm(false);
+  
+    const newSubscription = {
+      namePlan: name,
+      userId: user,  
+      nbrPrediction: 0,
+    };
+  
+    setSubscriptionData(newSubscription);
+  
+    const fetchSubscription = async () => {
+      try {
+        // Récupérer toutes les souscriptions
+        const response = await PaymentService.getAllSubscriptions();
+        const allSubscriptions = response.data;
+  
+        // Chercher la souscription de l'utilisateur
+        const userSubscription = allSubscriptions.find(sub => sub.userId === user);
+        if (userSubscription) {
+          // Supprimer la dernière souscription de l'utilisateur
+          await PaymentService.deleteSubscription(user);
+          console.log("Ancienne souscription supprimée avec succès.");
+        }
+  
+        // Enregistrer la nouvelle souscription
+        const saveResponse = await PaymentService.saveSubscription(newSubscription);
+        console.log("Nouvelle souscription enregistrée avec succès", saveResponse);
+  
+      } catch (err) {
+        console.error("Erreur lors de la récupération ou de l'enregistrement de la souscription", err);
+        setError("Une erreur est survenue lors de la gestion de la souscription.");
+      }
+    };
+  
+    fetchSubscription();
   };
+  
+  
 
   const [stripePromise, setStripePromise] = useState(null);
   const [clientSecret, setClientSecret] = useState("");
@@ -55,7 +97,7 @@ function Pracing() {
                 <a
                   href="#"
                   className="button"
-                  onClick={() => handleSubscribe(9.99)} // Passe le prix en argument
+                  onClick={() => handleSubscribe(9.99,"Basic")} 
                 >
                   Subscribe
                 </a>
@@ -72,7 +114,7 @@ function Pracing() {
                 <a
                   href="#"
                   className="button"
-                  onClick={() => handleSubscribe(24.99)}
+                  onClick={() => handleSubscribe(24.99,"Pro")}
                 >
                   Subscribe
                 </a>
@@ -89,7 +131,7 @@ function Pracing() {
                 <a
                   href="#"
                   className="button"
-                  onClick={() => handleSubscribe(49.99)}
+                  onClick={() => handleSubscribe(49.99,"Premium")}
                 >
                   Subscribe
                 </a>
@@ -100,7 +142,7 @@ function Pracing() {
       ) : (
         <>
           <h1 className="titreh2">Pay for your subscription plan</h1>
-          <div className="payment-container">
+          <div className="scrollable-container">
           <div>
             {clientSecret && stripePromise && (
               <Elements stripe={stripePromise} options={{ clientSecret }}>
@@ -108,9 +150,7 @@ function Pracing() {
               </Elements>
             )}
             </div>
-            <div className="payment-image">
-              <img src="/payment1.png" alt="Payment Image" />
-            </div>
+         
           </div>
         </>
       )}

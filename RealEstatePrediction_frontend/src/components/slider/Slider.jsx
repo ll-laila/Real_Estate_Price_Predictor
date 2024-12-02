@@ -25,10 +25,17 @@ function Slider({ images }) {
     {/*}
       {imageIndex !== null && (
         <div className="fullSlider">
+<<<<<<< HEAD
           <div className="arrow" onClick={() => changeSlide("left")}>
             <img src="/arrow.png" alt="Left arrow" />
+=======
+          <div className="arrow left" onClick={() => changeSlide("left")}>
+            <img src="/arrow.png" alt="Left Arrow" />
+>>>>>>> beeee2db738547ac4aea382a2486e915c842e4b9
           </div>
+        
           <div className="imgContainer">
+<<<<<<< HEAD
             <img src={images[imageIndex]} alt={`Slide ${imageIndex}`} />
           </div>
           <div className="arrow" onClick={() => changeSlide("right")}>
@@ -36,7 +43,16 @@ function Slider({ images }) {
           </div>
           <div className="close" onClick={() => setImageIndex(null)}>
             X
+=======
+            <img src={images[imageIndex]} alt={`Slide ${imageIndex + 1}`} />
           </div>
+        
+          <div className="arrow right" onClick={() => changeSlide("right")}>
+            <img src="/arrow.png" alt="Right Arrow" />
+>>>>>>> beeee2db738547ac4aea382a2486e915c842e4b9
+          </div>
+        
+          <div className="close" onClick={() => setImageIndex(null)}>X</div>
         </div>
       )}
       */}
