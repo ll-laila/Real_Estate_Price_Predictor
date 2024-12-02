@@ -11,9 +11,13 @@ import com.example.realestate.offre.repository.ImmobilierRepository;
 import com.example.realestate.offre.repository.OffreRepository;
 import com.example.realestate.offre.response.OffreResponse;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.mongodb.core.aggregation.Aggregation;
+import org.springframework.data.mongodb.core.aggregation.AggregationResults;
+import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -136,6 +140,26 @@ public class OffreService {
                 .collect(Collectors.toList());
     }
 
+    public List<OffreResponse> searchByCity(String city) {
+        // Recherchez tous les immobiliers dans la ville donnée
+        List<Immobilier> immobiliers = immobilierRepository.findByCity(city);
 
+        if (!immobiliers.isEmpty()) {
+            // Créez une liste pour stocker les offres
+            List<Offre> offres = new ArrayList<>();
+
+            // Pour chaque immobilier trouvé, recherchez les offres associées
+            for (Immobilier immobilier : immobiliers) {
+                List<Offre> offresForImmobilier = offreRepository.findByImmobilier_Id(immobilier.getId());
+                offres.addAll(offresForImmobilier); // Ajoutez les offres trouvées à la liste principale
+            }
+            return offres.stream()
+                    .map(OffreMapper::fromOffre)
+                    .collect(Collectors.toList());
+
+        }
+
+        return new ArrayList<>(); // Si aucun immobilier n'est trouvé, retourner une liste vide
+    }
 
 }

@@ -1,71 +1,73 @@
+
+import React, { useState } from "react";
 import "./filter.scss";
 
-function Filter() {
+const cities = [
+  "New York",
+  "Los Angeles",
+  "Chicago",
+  "Houston",
+  "Phoenix",
+  "Philadelphia",
+  "San Antonio",
+  "San Diego",
+  "Dallas",
+  "San Francisco",
+  "Miami",
+  "Seattle",
+  "Las Vegas",
+  "Atlanta",
+  "Boston",
+  "Washington, D.C.",
+  "Denver",
+  "Orlando",
+  "Detroit",
+  "Austin",
+  "Nashville",
+  "Portland",
+  "Baltimore",
+  "Salt Lake City",
+  "Charlotte"
+];
+
+function Filter({ onFilterChange }) {
+  const [localFilters, setLocalFilters] = useState({
+    city: "",
+
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    const updatedFilters = { ...localFilters, [name]: value };
+    setLocalFilters(updatedFilters);
+    onFilterChange(updatedFilters); // Transmettre les nouveaux filtres à ListPage
+  };
+
+  const handleSearch = () => {
+    onFilterChange(localFilters); // Appliquer les filtres actuels lors du clic sur le bouton
+  };
+
   return (
     <div className="filter">
-      <h1>
-        Search results for <b>London</b>
-      </h1>
+      <h1>Search Filters</h1>
       <div className="top">
         <div className="item">
           <label htmlFor="city">Location</label>
-          <input
-            type="text"
+          <select
             id="city"
             name="city"
-            placeholder="City Location"
-          />
-        </div>
-      </div>
-      <div className="bottom">
-        <div className="item">
-          <label htmlFor="type">Type</label>
-          <select name="type" id="type">
-            <option value="">any</option>
-            <option value="buy">Buy</option>
-            <option value="rent">Rent</option>
+            value={localFilters.city}
+            onChange={handleInputChange}
+          >
+            <option value="">Select a City</option>
+            {cities.map((city, index) => (
+              <option key={index} value={city}>
+                {city}
+              </option>
+            ))}
           </select>
         </div>
-        <div className="item">
-          <label htmlFor="property">Property</label>
-          <select name="property" id="property">
-            <option value="">any</option>
-            <option value="apartment">Apartment</option>
-            <option value="house">House</option>
-            <option value="condo">Condo</option>
-            <option value="land">Land</option>
-          </select>
-        </div>
-        <div className="item">
-          <label htmlFor="minPrice">Min Price</label>
-          <input
-            type="number"
-            id="minPrice"
-            name="minPrice"
-            placeholder="any"
-          />
-        </div>
-        <div className="item">
-          <label htmlFor="maxPrice">Max Price</label>
-          <input
-            type="text"
-            id="maxPrice"
-            name="maxPrice"
-            placeholder="any"
-          />
-        </div>
-        <div className="item">
-          <label htmlFor="bedroom">Bedroom</label>
-          <input
-            type="text"
-            id="bedroom"
-            name="bedroom"
-            placeholder="any"
-          />
-        </div>
-        <button>
-          <img src="/search.png" alt="" />
-        </button>
+    
       </div>
     </div>
   );
