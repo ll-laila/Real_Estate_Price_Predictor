@@ -1,5 +1,7 @@
 package com.example.realestate.offre.controller;
 
+import com.example.realestate.offre.entity.Immobilier;
+import com.example.realestate.offre.entity.Offre;
 import com.example.realestate.offre.request.OffreRequest;
 import com.example.realestate.offre.response.OffreResponse;
 import com.example.realestate.offre.service.OffreService;
@@ -83,6 +85,17 @@ public class OffreController {
     @GetMapping("/allOffers/{userId}")
     public ResponseEntity<List<OffreResponse>> getOffresByUserId(@PathVariable("userId") String userId) {
         return ResponseEntity.ok(offreService.findOffersByUserId(userId));
+    }
+
+
+    @GetMapping("/search")
+    public ResponseEntity<List<OffreResponse>> searchOffresByCity(@RequestParam String city) {
+        List<OffreResponse> offres = offreService.searchByCity(city);
+        if (offres.isEmpty()) {
+            return ResponseEntity.noContent().build(); 
+        }
+        return ResponseEntity.ok(offres);
+
     }
 
 

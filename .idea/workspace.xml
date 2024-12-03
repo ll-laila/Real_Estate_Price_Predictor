@@ -5,43 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e73203a-234d-49c0-8538-4aef139b8ac0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/public/Payment-success.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/public/imagePredict.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/public/payment1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/serverStripe/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/serverStripe/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/serverStripe/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/serverStripe/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/payment/CheckoutForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/payment/Completion.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/payment/Pracing.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/payment/Pracing.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/listOffresPage/listPage.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Payment/src/main/java/com/example/realestate/payment/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Payment/src/main/java/com/example/realestate/payment/controller/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Payment/src/main/java/com/example/realestate/payment/entity/Subscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Payment/src/main/java/com/example/realestate/payment/entity/Subscription.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Payment/src/main/java/com/example/realestate/payment/mapper/SubscriptionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Payment/src/main/java/com/example/realestate/payment/mapper/SubscriptionMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Payment/src/main/java/com/example/realestate/payment/request/SubscriptionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Payment/src/main/java/com/example/realestate/payment/request/SubscriptionRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Payment/src/main/java/com/example/realestate/payment/response/SubscriptionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Payment/src/main/java/com/example/realestate/payment/response/SubscriptionResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Payment/src/main/java/com/example/realestate/payment/service/SubscriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Payment/src/main/java/com/example/realestate/payment/service/SubscriptionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/MyOffresList/MyList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/MyOffresList/MyList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/cardOffre/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/cardOffre/Card.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/pin/Pin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/pin/Pin.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/MyOffres/MyOffresPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/MyOffres/MyOffresPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/homePage/homeComponenets/blocOffre.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/homePage/homeComponenets/blocOffre.jsx" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/controller/OffreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/controller/OffreController.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/navbar/Navbar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/homePage/homePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/homePage/homePage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/layout/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/layout/layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/layout/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/layout/layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/listPage/listPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/listPage/listPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/newPostPage/newPostPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/newPostPage/newPostPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/prediction/Prediction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/prediction/Prediction.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/prediction/Prediction.scss" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/prediction/Prediction.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/services/PaymentService.js" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/services/PaymentService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/homePage/homePage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/homePage/homePage.scss" afterDir="false" />
+>>>>>>> beeee2db738547ac4aea382a2486e915c842e4b9
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,22 +22,28 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Ismailchaoufi"
-  }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ll-laila/Real_Estate_Price_Predictor.git",
-    "accountId": "fee2b4cf-a29a-4466-8509-20ad8cd0ccf0"
-  }
-}]]></component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+<<<<<<< HEAD
   <component name="KubernetesApiProvider"><![CDATA[{
   "isMigrated": true
 }]]></component>
+=======
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Ismailchaoufi&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ll-laila/Real_Estate_Price_Predictor.git&quot;,
+    &quot;accountId&quot;: &quot;33d0830a-da4d-42e7-b342-913aa0740faa&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+>>>>>>> beeee2db738547ac4aea382a2486e915c842e4b9
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -87,21 +64,33 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+<<<<<<< HEAD
+=======
     "Docker.RealEstatePrediction_backend: Compose Deployment.executor": "Run",
+>>>>>>> beeee2db738547ac4aea382a2486e915c842e4b9
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+<<<<<<< HEAD
     "Spring Boot.ConfigServerApplication.executor": "Run",
     "Spring Boot.DiscoveryApplication.executor": "Run",
     "Spring Boot.GatewayApplication.executor": "Run",
     "Spring Boot.OffreApplication.executor": "Run",
     "Spring Boot.PaymentApplication.executor": "Run",
     "Spring Boot.UserApplication.executor": "Run",
+=======
+    "Spring Boot.ConfigServerApplication.executor": "Debug",
+    "Spring Boot.DiscoveryApplication.executor": "Debug",
+    "Spring Boot.GatewayApplication.executor": "Debug",
+    "Spring Boot.OffreApplication.executor": "Debug",
+    "Spring Boot.PaymentApplication.executor": "Debug",
+    "Spring Boot.UserApplication.executor": "Debug",
+>>>>>>> beeee2db738547ac4aea382a2486e915c842e4b9
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/S5/PROJET_AI_ATLASS/Real_Estate_Price_Predictor/RealEstatePrediction_backend/services/Gateway/src/main/java/com/example/realestate",
@@ -112,9 +101,13 @@
     "nodejs_package_manager_path": "npm",
     "run.configurations.included.in.services": "true",
     "settings.editor.selected.configurable": "configurable.group.appearance",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.2.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\S5\PROJET_AI_ATLASS\Real_Estate_Price_Predictor\RealEstatePrediction_backend\services\Gateway\src\main\java\com\example\realestate" />
@@ -129,7 +122,11 @@
       </set>
     </option>
   </component>
+<<<<<<< HEAD
+  <component name="RunManager" selected="Spring Boot.OffreApplication">
+=======
   <component name="RunManager" selected="Docker.RealEstatePrediction_backend: Compose Deployment">
+>>>>>>> beeee2db738547ac4aea382a2486e915c842e4b9
     <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="config-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.config_server.ConfigServerApplication" />
@@ -181,7 +178,9 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -193,8 +192,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
       </set>
     </attachedChunks>
   </component>
@@ -211,7 +210,15 @@
       <workItem from="1732719514166" duration="280000" />
       <workItem from="1732725857822" duration="353000" />
       <workItem from="1732729960684" duration="963000" />
+<<<<<<< HEAD
+      <workItem from="1732783258282" duration="2051000" />
+      <workItem from="1732879933418" duration="856000" />
+      <workItem from="1732898372192" duration="1994000" />
+=======
       <workItem from="1732888987035" duration="13935000" />
+      <workItem from="1732981356127" duration="18257000" />
+      <workItem from="1733042569409" duration="22041000" />
+>>>>>>> beeee2db738547ac4aea382a2486e915c842e4b9
     </task>
     <servers />
   </component>
