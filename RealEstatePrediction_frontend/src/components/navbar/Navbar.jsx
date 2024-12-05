@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
 
-  const user = true;
+  const user = false;
   
   return (
       <nav>
@@ -42,12 +42,13 @@ function Navbar() {
             </>
         ) : (
             <>
-              <div className="left">
-                <a href="/" className="logo">
-                  <img src="/logo.png" alt=""/>
-                  <span>LamaEstate</span>
-                </a>
-              </div>
+                <div className="left">
+                    <a href="/" className="logo">
+                        <img src="/logo.png" alt=""/>
+                        <span>LamaEstate</span>
+                    </a>
+                </div>
+
             </>
         )}
       </nav>
