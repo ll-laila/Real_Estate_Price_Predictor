@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85fdc0b3-dd96-4ffb-8d11-e9265eb684b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/list_cities/cities.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/controller/OffreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/controller/OffreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/repository/ImmobilierRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/repository/ImmobilierRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/repository/OffreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/repository/OffreRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/service/OffreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/service/OffreService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/filter/Filter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/filter/Filter.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/map/Map.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/map/Map.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/pin/Pin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/pin/Pin.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/searchBar/SearchBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/searchBar/SearchBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/slider/Slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/slider/Slider.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/listOffresPage/listPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/listOffresPage/listPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/listPage/listPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/listPage/listPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/singleOffrePage/singleOffrePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/singleOffrePage/singleOffrePage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/services/OffreService.js" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/services/OffreService.js" afterDir="false" />
-    </list>
+    <list default="true" id="85fdc0b3-dd96-4ffb-8d11-e9265eb684b0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +15,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
