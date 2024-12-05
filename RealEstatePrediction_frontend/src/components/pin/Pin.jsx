@@ -1,17 +1,14 @@
-import { Marker, Popup } from "react-leaflet";
-import "./pin.scss";
-import { Link } from "react-router-dom";
+import { Marker } from 'react-leaflet';
+import L from 'leaflet';
 
 
 
 function Pin({ item }) {
-  // Vérification des coordonnées
-  const latitude = item.latitude || 0;  // Valeur par défaut si latitude est undefined
-  const longitude = item.longitude || 0; // Valeur par défaut si longitude est undefined
-  
-  if (latitude === 0 && longitude === 0) {
-    return null;  // Si les coordonnées sont manquantes, ne pas afficher le marker
-  }
+
+  const { immobilierResponse } = item;
+  const { latitude, longitude } = immobilierResponse;
+
+
 
   return (
     <Marker position={[latitude, longitude]}>
@@ -25,6 +22,7 @@ function Pin({ item }) {
           </div>
         </div>
       </Popup>
+
     </Marker>
   );
 }
