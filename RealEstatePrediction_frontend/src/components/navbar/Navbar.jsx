@@ -42,12 +42,13 @@ function Navbar() {
             </>
         ) : (
             <>
-              <div className="left">
-                <a href="/" className="logo">
-                  <img src="/logo.png" alt=""/>
-                  <span>LamaEstate</span>
-                </a>
-              </div>
+                <div className="left">
+                    <a href="/" className="logo">
+                        <img src="/logo.png" alt=""/>
+                        <span>LamaEstate</span>
+                    </a>
+                </div>
+
             </>
         )}
       </nav>

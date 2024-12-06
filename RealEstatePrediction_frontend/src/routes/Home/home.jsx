@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom"; // Importer useNavigate
 import Card from "../../components/cardOffre/Card";
 import OffreService from "../../services/OffreService";
 import "./home.scss";
@@ -7,6 +8,7 @@ function Home() {
     const [offres, setOffres] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const navigate = useNavigate(); // Initialiser useNavigate
 
     // Données statiques à utiliser si la base de données est vide
     const staticOffres = [
@@ -64,16 +66,25 @@ function Home() {
         fetchOffres();
     }, []);
 
+    const handleRedirect = () => {
+        navigate("/login"); // Rediriger vers la page login
+    };
+
     return (
         <div className="homePage">
             <div className="textContainer">
                 <div className="wrapper">
                     <h1 className="title">Find Real Estate & Get Your Dream Place</h1>
                     <p>
-                        Explore our wide selection of real estate options, whether you're looking
-                        to buy or rent, and discover unique opportunities tailored to your lifestyle.
-                        Trust our expertise to guide you through every step of your real estate journey.
+                        Our platform is not just about browsing or listing properties.
+                        We leverage advanced AI technology to predict real estate prices,
+                        empowering you with insights to make smarter investment decisions.
+                        Whether you are buying, selling, or simply exploring, we are here to revolutionize your real estate journey.
                     </p>
+                    {/* Ajouter le bouton en dessous de la description */}
+                    <button className="getStartedButton" onClick={handleRedirect}>
+                        Get Started
+                    </button>
                     <div className="offersSection">
                         <h2 className="sectionTitle">Top Offers</h2>
                         {loading && <p>Loading offers...</p>}
