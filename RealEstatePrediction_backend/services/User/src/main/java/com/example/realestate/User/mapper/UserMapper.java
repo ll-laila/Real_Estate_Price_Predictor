@@ -20,6 +20,7 @@ public class UserMapper {
                 .email(request.email())
                 .phone(request.phone())
                 .password(request.password())
+                .enabled(true)
                 .build();
     }
 
@@ -27,11 +28,13 @@ public class UserMapper {
 
         return new UserResponse(
                 user.getId(),
+                user.getKeycloakId(),
                 user.getUsername(),
                 user.getFirstName(),
                 user.getLastName(),
                 user.getEmail(),
-                user.getPhone()
+                user.getPhone(),
+                user.isEnabled()
         );
     }
 }

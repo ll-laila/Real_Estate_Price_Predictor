@@ -3,3 +3,12 @@ spring:
     import: optional:configserver:http://localhost:8888
   application:
     name: user-service
+
+
+
+keycloak:
+  admin:
+    server-url: http://localhost:9090
+    realm: micro-services
+    client-id: micro-services-api
+    client-secret: rrfcVwVQWSYaz9NcsJMxsDDLl2ABTVDj
