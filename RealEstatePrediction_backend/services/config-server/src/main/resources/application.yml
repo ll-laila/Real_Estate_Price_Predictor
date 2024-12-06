@@ -11,3 +11,12 @@ spring:
 server:
   port: 8888
 
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: eureka-0
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone:  http://eureka-0.eureka.default.svc.cluster.local:8761/eureka
