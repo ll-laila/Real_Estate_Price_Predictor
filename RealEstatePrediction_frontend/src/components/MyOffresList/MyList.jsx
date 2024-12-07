@@ -1,50 +1,69 @@
-import './Mylist.scss'
+import './Mylist.scss';
 import { useState, useEffect } from "react";
 import CardMyOffre from "../cardMyOffre/cardMyOffre";
 import OffreService from "../../services/OffreService";
-import "./MyList.scss";
-import {listData} from "../../lib/dummydata"
+import UserService from "../../services/UserService";
+import { useNavigate } from "react-router-dom";
 
-function MyList(){
+function MyList() {
   const [offers, setOffers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const userId = "67477a5a7e8cf83850b79b91";//à remplacer par user ID authentified
+  const navigate = useNavigate();
+
   useEffect(() => {
-    const fetchOffers = async () => {
+    const fetchUserOffres = async () => {
       try {
-        const response = await OffreService.getOffersByUser(userId);
-        setOffers(response.data); // Met à jour les offres avec les données récupérées
+        // Get the authenticated user's ID
+        const response = await UserService.getUserById(null); // Passing null will fetch the currently authenticated user
+        const userId = response.data.id;
+        console.log(userId);
+
+        // Fetch offers for this user
+        const offersResponse = await OffreService.getOffersByUser(userId);
+        setOffers(offersResponse.data);
+        setLoading(false);
       } catch (err) {
-        setError("Erreur lors de la récupération des offres");
-        console.error(err);
-      } finally {
-        setLoading(false); // Fin du chargement
+        console.error("Error fetching user offers:", err);
+        setError("Could not fetch offers. Please log in again.");
+        setLoading(false);
+        
+        // If authentication fails, redirect to login
+        if (err.response && err.response.status === 401) {
+          localStorage.removeItem('accessToken');
+          navigate('/login');
+        }
       }
     };
-    fetchOffers(); // Appel de la fonction pour récupérer les données
-  }, [userId]);
+
+    // Check if user is authenticated
+    const token = localStorage.getItem('accessToken');
+    if (token) {
+      fetchUserOffres();
+    } else {
+      navigate('/login');
+    }
+  }, [navigate]);
 
   if (loading) {
-    return <p>Offers Loading...</p>;
+    return <div>Loading offers...</div>;
   }
 
   if (error) {
-    return <p>{error}</p>;
+    return <div>{error}</div>;
   }
 
-
-
-
   return (
-    <div className='list'>
+    <div className="my-list-container">
       {offers.length > 0 ? (
-        offers.map((item) => <CardMyOffre key={item.id} item={item} />)
+        offers.map((item) => (
+          <CardMyOffre key={item.id} item={item} />
+        ))
       ) : (
-        <p>Aucune offre disponible.</p>
+        <div>No offers available.</div>
       )}
     </div>
-  ) 
+  );
 }
 
-export default MyList
+export default MyList;

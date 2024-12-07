@@ -5,21 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e9fa6c5-994f-4f42-b10e-3f24ffb2266e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/User/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/User/UserClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/request/UserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/request/UserRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/response/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/response/UserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/slider/Slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/slider/Slider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/MyOffresList/MyList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/MyOffresList/MyList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/login/login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/register/register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/register/register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/services/OffreService.js" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/services/OffreService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/services/UserService.js" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/services/UserService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,6 +150,15 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Docker.RealEstatePrediction_backend: Compose Deployment" />
+      <item itemvalue="Spring Boot.ConfigServerApplication" />
+      <item itemvalue="Spring Boot.DiscoveryApplication" />
+      <item itemvalue="Spring Boot.GatewayApplication" />
+      <item itemvalue="Spring Boot.OffreApplication" />
+      <item itemvalue="Spring Boot.PaymentApplication" />
+      <item itemvalue="Spring Boot.UserApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Docker.RealEstatePrediction_backend: Compose Deployment" />
@@ -190,7 +190,10 @@
       <workItem from="1733333142030" duration="10740000" />
       <workItem from="1733388450583" duration="14480000" />
       <workItem from="1733455469938" duration="13281000" />
-      <workItem from="1733471806692" duration="269000" />
+      <workItem from="1733471806692" duration="810000" />
+      <workItem from="1733495723903" duration="13597000" />
+      <workItem from="1733510600220" duration="6484000" />
+      <workItem from="1733580265537" duration="3956000" />
     </task>
     <servers />
   </component>

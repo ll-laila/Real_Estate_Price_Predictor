@@ -1,11 +1,8 @@
-import axios from "axios";
-
-const OFFRE_API_BASE_URL = "http://localhost:8222/api/v1/offres";
-const OFFRE_API_BASE_URL_SERVICE = "http://localhost:8050/api/v1/offres";
+import axiosInstance from './axiosInterceptor';
 
 class OffreService {
   saveOffer(offer) {
-    return axios.post(OFFRE_API_BASE_URL_SERVICE, offer, {
+    return axiosInstance.post("/offres", offer, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -13,45 +10,33 @@ class OffreService {
   }
 
   getAllOffres() {
-    return axios.get(OFFRE_API_BASE_URL + "/allOffers");
+    return axiosInstance.get("/offres/allOffers");
   }
 
   getOffersByUser(userId) {
-    return axios.get(OFFRE_API_BASE_URL + "/allOffers/" + userId);
+    return axiosInstance.get(`/offres/allOffers/${userId}`);
   }
 
   updateOffer(offer, offerId) {
-
-
-
-    return axios.put(OFFRE_API_BASE_URL_SERVICE + "/" + offerId, offer, {
-        headers: {
-            'Content-Type': 'application/json',
-        },//here the problem doesn't work with port 8222
-
+    return axiosInstance.put(`/offres/${offerId}`, offer, {
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
   }
 
   deleteOffer(id) {
-
-    //return axios.delete(OFFRE_API_BASE_URL + "/" + id);
-
-    return axios.delete(`${OFFRE_API_BASE_URL_SERVICE}/${id}`);
-
+    return axiosInstance.delete(`/offres/${id}`);
   }
 
   getOfferById(offerId) {
-    return axios.get(OFFRE_API_BASE_URL + "/" + offerId);
+    return axiosInstance.get(`/offres/${offerId}`);
   }
 
   getFilteredOffres(filters) {
     const queryString = new URLSearchParams(filters).toString();
-
-    return axios.get(`${OFFRE_API_BASE_URL}/search?${queryString}`);
+    return axiosInstance.get(`/offres/search?${queryString}`);
   }
-  
 }
 
-
-export default new OffreService ();
-
+export default new OffreService();
