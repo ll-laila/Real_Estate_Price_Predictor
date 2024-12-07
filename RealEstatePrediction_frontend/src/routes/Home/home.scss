@@ -4,6 +4,7 @@
   display: flex;
   height: 100%;
 
+
   .textContainer {
     flex: 3;
     .wrapper {
@@ -15,6 +16,23 @@
       gap: 20px; // Ajuste l'espacement entre les éléments
       height: 100%;
       margin-top: 20px; // Ajout d'un espacement en haut si nécessaire
+      .getStartedButton {
+        background-color: #fece51;
+        cursor: pointer;
+        border: none;
+        padding: 12px 24px;
+        font-size: 16px;
+
+        border-radius: 4px;
+        text-align: center;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #e1c300; /* Couleur jaune foncé au survol */
+        }
+      }
+
       @include lg{
         padding-right: 50px;
       }
@@ -36,7 +54,6 @@
       }
       .offersSection {
         padding: 50px 20px;
-        overflow-y: auto;   /* Active le défilement vertical */
       }
 
       .sectionTitle {

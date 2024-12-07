@@ -21,8 +21,6 @@ services:
       - ME_CONFIG_MONGODB_ADMINPASSWORD=7RiZRnQZYmJOKt7u
       - ME_CONFIG_MONGODB_SERVER=mongodb
 
-
-
   zipkin:
     container_name: zipkin
     image: openzipkin/zipkin
