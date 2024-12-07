@@ -52,4 +52,62 @@
       object-fit: cover;
     }
   }
+  .profileUpdatePage .formContainer form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item label {
+    margin-bottom: 5px;
+  }
+
+  .item input {
+    padding: 8px;
+    font-size: 16px;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .profileUpdatePage .formContainer h1 {
+    font-size: 2rem; /* Increase font size */
+    font-weight: bold; /* Make the font bold */
+    color: #4CAF50; /* Use a fresh, engaging color */
+    text-align: center; /* Center-align the text */
+    text-transform: uppercase; /* Make the text uppercase */
+    letter-spacing: 2px; /* Add some space between letters */
+    padding: 20px 0; /* Add padding around the heading */
+    background: linear-gradient(90deg, #4CAF50, #81C784); /* Add a subtle gradient */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    color: transparent; /* Make the text color transparent so the gradient shows */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a soft shadow for depth */
+  }
+
+  .profileUpdatePage .formContainer h1::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 4px;
+    background-color: #4CAF50; /* Underline with the same color as the gradient */
+    margin: 10px auto;
+  }
+
 }

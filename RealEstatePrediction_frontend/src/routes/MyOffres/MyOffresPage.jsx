@@ -9,7 +9,7 @@ function MyOffresPage() {
       <div className="details">
         <div className="wrapper">
           <div className="title">
-            <h1>My Offres</h1>
+            <h1>My Offers</h1>
             <Link to="/AddOffre">
               <button>Create New Post</button>
             </Link>

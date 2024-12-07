@@ -1,14 +1,15 @@
 import './Mylist.scss'
 import { useState, useEffect } from "react";
-import CardMyOffre from "../cardMyOffre/cardMyOffre"
+import CardMyOffre from "../cardMyOffre/cardMyOffre";
 import OffreService from "../../services/OffreService";
+import "./MyList.scss";
 import {listData} from "../../lib/dummydata"
 
 function MyList(){
   const [offers, setOffers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const userId = "6749a2da6dc00c756ad0d6d1";//à remplacer par user ID authentified
+  const userId = "67477a5a7e8cf83850b79b91";//à remplacer par user ID authentified
   useEffect(() => {
     const fetchOffers = async () => {
       try {
@@ -25,7 +26,7 @@ function MyList(){
   }, [userId]);
 
   if (loading) {
-    return <p>Chargement des offres...</p>;
+    return <p>Offers Loading...</p>;
   }
 
   if (error) {
