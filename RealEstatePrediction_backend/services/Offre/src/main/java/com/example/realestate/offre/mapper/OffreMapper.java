@@ -21,7 +21,7 @@ public class OffreMapper {
         return Offre.builder()
                 .id(request.id())
                 .immobilier(ImmobilierMapper.toImmobilier(request.immobilierRequest()))
-                .userId(request.userId())
+                .username(request.username())
                 .build();
     }
 
@@ -33,7 +33,7 @@ public class OffreMapper {
         return new OffreResponse(
                 offre.getId(),
                 ImmobilierMapper.fromImmobilier(offre.getImmobilier()),
-                offre.getUserId(),
+                offre.getUsername(),
                 offre.getDateDePublication(),
                 offre.getDateDeUpdate()
         );

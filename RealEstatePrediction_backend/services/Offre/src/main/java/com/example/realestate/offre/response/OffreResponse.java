@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public record OffreResponse(
         String id,
         ImmobilierResponse immobilierResponse,
-        String userId,
+        String username,
         LocalDate dateDePublication,
         LocalDate dateDeUpdate
 ) {

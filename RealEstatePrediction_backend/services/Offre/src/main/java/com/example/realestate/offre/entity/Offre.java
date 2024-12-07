@@ -20,7 +20,7 @@ public class Offre {
     private String id;
     @DBRef
     private Immobilier immobilier;
-    private String userId;
+    private String username;
     private LocalDate dateDePublication;
     private LocalDate dateDeUpdate;
 }

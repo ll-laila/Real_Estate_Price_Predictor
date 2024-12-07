@@ -29,17 +29,8 @@ public class SecurityConfig {
         http
                 .csrf(ServerHttpSecurity.CsrfSpec::disable)
                 .authorizeExchange(exchange -> exchange
-                        // Permit access to Eureka and actuator endpoints
-                        .pathMatchers(
-                                "/eureka/**",
-                                "/actuator/**",
-                                "/webjars/**",
-                                "/v3/api-docs/**",
-                                "/swagger-ui/**"
-                        ).permitAll()
-
-                        // Require authentication for all other routes
-                        .anyExchange().authenticated()
+                        .pathMatchers("/api/v1/users/login","/api/v1/users/create").permitAll() // Allow /login without authentication
+                        .anyExchange().authenticated() // Require authentication for other endpoints
                 )
                 .oauth2ResourceServer(oauth2 -> oauth2
                         .jwt(jwtSpec -> jwtSpec
@@ -52,22 +43,10 @@ public class SecurityConfig {
 
     private Converter<Jwt, Mono<AbstractAuthenticationToken>> jwtAuthenticationConverter() {
         JwtAuthenticationConverter jwtAuthenticationConverter = new JwtAuthenticationConverter();
-
         jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter(jwt -> {
-            // Safe extraction of roles with multiple fallback strategies
+            // Extract roles
             List<String> roles = Optional.ofNullable(jwt.getClaimAsStringList("roles"))
-                    .orElseGet(() -> {
-                        // Try alternative claim paths
-                        Map<String, Object> realmAccess = jwt.getClaim("realm_access");
-                        if (realmAccess != null) {
-                            List<String> realmRoles = (List<String>) realmAccess.get("roles");
-                            if (realmRoles != null) return realmRoles;
-                        }
-
-                        // Fallback to default role if no roles found
-                        return Collections.singletonList("USER");
-                    });
-
+                    .orElse(Collections.singletonList("USER"));
             return roles.stream()
                     .map(role -> "ROLE_" + role.toUpperCase())
                     .map(SimpleGrantedAuthority::new)
@@ -77,3 +56,4 @@ public class SecurityConfig {
         return new ReactiveJwtAuthenticationConverterAdapter(jwtAuthenticationConverter);
     }
 }
+

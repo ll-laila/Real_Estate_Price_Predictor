@@ -1,4 +1,6 @@
 package com.example.realestate.User.service;
+import com.example.realestate.User.dto.UserDTO;
+import com.example.realestate.User.mapper.UserMapper;
 import jakarta.ws.rs.NotFoundException;
 import org.apache.commons.lang.StringUtils;
 import org.keycloak.OAuth2Constants;
@@ -222,24 +224,8 @@ public class KeycloakUserService {
                 throw new UserNotFoundException("User not found with username: " + username);
             }
 
-            // Get the first matching user
-            UserRepresentation userRepresentation = users.get(0);
-
-            // Convert to DTO
-            UserDTO userDTO = new UserDTO();
-            userDTO.setId(userRepresentation.getId());
-            userDTO.setUsername(userRepresentation.getUsername());
-            userDTO.setEmail(userRepresentation.getEmail());
-            userDTO.setFirstName(userRepresentation.getFirstName());
-            userDTO.setLastName(userRepresentation.getLastName());
-            userDTO.setEnabled(userRepresentation.isEnabled());
-
-            // Optional: Add any additional attributes
-            if (userRepresentation.getAttributes() != null) {
-                userDTO.setAttributes(userRepresentation.getAttributes());
-            }
-
-            return userDTO;
+            // Convert the first matching user to UserDTO using the mapper
+            return UserMapper.toDTO(users.get(0));
         } catch (Exception e) {
             logger.error("Error retrieving user by username: {}", username, e);
             throw new RuntimeException("Failed to retrieve user by username", e);
@@ -250,33 +236,6 @@ public class KeycloakUserService {
         }
     }
 
-
-    // DTO for user data
-    public static class UserDTO {
-        private String id;
-        private String username;
-        private String email;
-        private String firstName;
-        private String lastName;
-        private boolean enabled;
-        private Map<String, List<String>> attributes;
-
-        // Getters and setters
-        public String getId() { return id; }
-        public void setId(String id) { this.id = id; }
-        public String getUsername() { return username; }
-        public void setUsername(String username) { this.username = username; }
-        public String getEmail() { return email; }
-        public void setEmail(String email) { this.email = email; }
-        public String getFirstName() { return firstName; }
-        public void setFirstName(String firstName) { this.firstName = firstName; }
-        public String getLastName() { return lastName; }
-        public void setLastName(String lastName) { this.lastName = lastName; }
-        public boolean isEnabled() { return enabled; }
-        public void setEnabled(boolean enabled) { this.enabled = enabled; }
-        public Map<String, List<String>> getAttributes() { return attributes; }
-        public void setAttributes(Map<String, List<String>> attributes) { this.attributes = attributes; }
-    }
     //update user by username
     public void updateUserByUsername(String username, UserDTO updatedUser) {
         Keycloak keycloak = null;
@@ -292,22 +251,21 @@ public class KeycloakUserService {
                 throw new UserNotFoundException("User not found with username: " + username);
             }
 
-            // Retrieve the first user (assuming usernames are unique)
+            // Retrieve the user and update fields using the mapper
             UserRepresentation userRepresentation = users.get(0);
+            UserRepresentation updatedRepresentation = UserMapper.toRepresentation(updatedUser);
 
             // Update fields
-            if (StringUtils.isNotBlank(updatedUser.getEmail())) {
-                userRepresentation.setEmail(updatedUser.getEmail());
+            if (updatedRepresentation.getEmail() != null) {
+                userRepresentation.setEmail(updatedRepresentation.getEmail());
             }
-            if (StringUtils.isNotBlank(updatedUser.getFirstName())) {
-                userRepresentation.setFirstName(updatedUser.getFirstName());
+            if (updatedRepresentation.getFirstName() != null) {
+                userRepresentation.setFirstName(updatedRepresentation.getFirstName());
             }
-            if (StringUtils.isNotBlank(updatedUser.getLastName())) {
-                userRepresentation.setLastName(updatedUser.getLastName());
+            if (updatedRepresentation.getLastName() != null) {
+                userRepresentation.setLastName(updatedRepresentation.getLastName());
             }
-            if (updatedUser.isEnabled() != userRepresentation.isEnabled()) {
-                userRepresentation.setEnabled(updatedUser.isEnabled());
-            }
+            userRepresentation.setEnabled(updatedRepresentation.isEnabled());
 
             // Update user in Keycloak
             keycloak.realm(keycloakConfig.getRealm())
@@ -383,8 +341,6 @@ public class KeycloakUserService {
             throw new RuntimeException("Invalid credentials or login failed", e);
         }
     }
-
-
     // Custom exceptions
     public static class UserNotFoundException extends RuntimeException {
         public UserNotFoundException(String message) {

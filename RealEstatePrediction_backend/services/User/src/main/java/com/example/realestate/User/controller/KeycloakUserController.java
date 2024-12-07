@@ -1,17 +1,19 @@
 package com.example.realestate.User.controller;
 
+import com.example.realestate.User.dto.UserDTO;
 import com.example.realestate.User.service.KeycloakUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.HashMap;
 import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1/users")
-@CrossOrigin(origins = "http://localhost:5173")
+// @CrossOrigin(origins = "http://localhost:5173")
 public class KeycloakUserController {
     @Autowired
     private KeycloakUserService keycloakUserService;
@@ -75,15 +77,21 @@ public class KeycloakUserController {
     //try to use UserDTO in class separately
     //then use this methode in offre service
     //fix the front end
-    @GetMapping("/{userName}")
-    public ResponseEntity<KeycloakUserService.UserDTO> getUserByUserName(@PathVariable String userName) {
-        KeycloakUserService.UserDTO user = keycloakUserService.getUserByUserName(userName);
+    @GetMapping("/{username}")
+    public ResponseEntity<UserDTO> getUserByUserName(@PathVariable String username) {
+        UserDTO user = keycloakUserService.getUserByUserName(username);
         return ResponseEntity.ok(user);
+    }
+    @GetMapping("/users/me")
+    public ResponseEntity<UserDTO> getCurrentUser(Principal principal) {
+        // Extract user from the authentication context
+        UserDTO currentUser = keycloakUserService.getUserByUserName(principal.getName());
+        return ResponseEntity.ok(currentUser);
     }
     @PutMapping("/{username}")
     public ResponseEntity<Map<String, String>> updateUserByUsername(
             @PathVariable String username,
-            @RequestBody KeycloakUserService.UserDTO updatedUser) {
+            @RequestBody UserDTO updatedUser) {
         keycloakUserService.updateUserByUsername(username, updatedUser);
 
         Map<String, String> response = new HashMap<>();

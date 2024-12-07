@@ -1,4 +1,4 @@
-package com.example.realestate.User.response;
+package com.example.realestate.User;
 
 import lombok.Getter;
 import lombok.Setter;

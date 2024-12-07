@@ -8,5 +8,20 @@ spring:
     import: optional:configserver:http://localhost:8888
   application:
     name: gateway-service
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          "[/api/**]": # Apply CORS for all routes starting with /api/
+            allowedOrigins: "http://localhost:5173"  # React frontend
+            allowedMethods: # Allowed HTTP methods
+              - GET
+              - POST
+              - PUT
+              - DELETE
+            allowedHeaders:
+              - "Content-Type"
+              - "Authorization"
+            allowCredentials: true  # Allow credentials (cookies, headers)
 
 
