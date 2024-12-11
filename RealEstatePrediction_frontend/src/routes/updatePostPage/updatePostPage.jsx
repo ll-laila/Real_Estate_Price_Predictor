@@ -136,7 +136,7 @@ function UpdatePostPage() {
   
       // Prepare the request payload
       const updateRequest = {
-        userId: "67477a5a7e8cf83850b79b91", // Replace with actual user ID
+        userId: "6758e8867bf2797504d63352", // Replace with actual user ID
         immobilierRequest: {
           ...offerRequest,
           images: allImages, // Include all images

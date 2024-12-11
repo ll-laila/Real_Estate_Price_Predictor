@@ -6,47 +6,79 @@ function Slider({ images }) {
 
   const changeSlide = (direction) => {
     if (direction === "left") {
-      if (imageIndex === 0) {
-        setImageIndex(images.length - 1);
-      } else {
-        setImageIndex(imageIndex - 1);
-      }
+      setImageIndex((prevIndex) => 
+        prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      );
     } else {
-      if (imageIndex === images.length - 1) {
-        setImageIndex(0);
-      } else {
-        setImageIndex(imageIndex + 1);
+      setImageIndex((prevIndex) => 
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (imageIndex !== null) {
+      switch (e.key) {
+        case 'ArrowLeft':
+          changeSlide('left');
+          break;
+        case 'ArrowRight':
+          changeSlide('right');
+          break;
+        case 'Escape':
+          setImageIndex(null);
+          break;
+        default:
+          break;
       }
     }
   };
 
   return (
-    <div className="slider">
+    <div className="slider" onKeyDown={handleKeyDown} tabIndex={0}>
       {imageIndex !== null && (
         <div className="fullSlider">
-          <div className="arrow" onClick={() => changeSlide("left")}>
-            <img src="/arrow.png" alt="" />
+          <div 
+            className="arrow left" 
+            onClick={() => changeSlide("left")}
+            aria-label="Previous image"
+          >
+            <img src="/arrow.png" alt="Previous" />
           </div>
           <div className="imgContainer">
-            {console.log(images[imageIndex])}
-            <img src={images[imageIndex]} alt="" />
+            <img 
+              src={images[imageIndex]} 
+              alt={`Slide ${imageIndex + 1}`} 
+            />
           </div>
-          <div className="arrow" onClick={() => changeSlide("right")}>
-            <img src="/arrow.png" className="right" alt="" />
+          <div 
+            className="arrow right" 
+            onClick={() => changeSlide("right")}
+            aria-label="Next image"
+          >
+            <img src="/arrow.png" alt="Next" />
           </div>
-          <div className="close" onClick={() => setImageIndex(null)}>
-            X
-          </div>
+          <button 
+            className="close" 
+            onClick={() => setImageIndex(null)}
+            aria-label="Close slider"
+          >
+            ✕
+          </button>
         </div>
       )}
       <div className="bigImage">
-        <img src={images[0]} alt="" onClick={() => setImageIndex(0)} />
+        <img 
+          src={images[0]} 
+          alt="Main image" 
+          onClick={() => setImageIndex(0)} 
+        />
       </div>
       <div className="smallImages">
         {images.slice(1).map((image, index) => (
           <img
             src={image}
-            alt=""
+            alt={`Thumbnail ${index + 2}`}
             key={index}
             onClick={() => setImageIndex(index + 1)}
           />

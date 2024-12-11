@@ -18,6 +18,7 @@ import java.util.List;
 
 
 
+
 @RestController
 @RequestMapping("/api/v1/offres")
 @RequiredArgsConstructor
@@ -83,7 +84,7 @@ public class OffreController {
     //get offers by user id
     @GetMapping("/allOffers/{userId}")
     public ResponseEntity<List<OffreResponse>> getOffresByUserId(@PathVariable("userId") String userId) {
-        return ResponseEntity.ok(offreService.findOffersByUserName(userId));
+        return ResponseEntity.ok(offreService.findOffersByUserId(userId));
     }
 
 
@@ -91,7 +92,7 @@ public class OffreController {
     public ResponseEntity<List<OffreResponse>> searchOffresByCity(@RequestParam String city) {
         List<OffreResponse> offres = offreService.searchByCity(city);
         if (offres.isEmpty()) {
-            return ResponseEntity.noContent().build(); 
+            return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(offres);
 

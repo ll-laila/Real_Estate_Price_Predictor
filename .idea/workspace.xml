@@ -6,9 +6,40 @@
   <component name="ChangeListManager">
     <list default="true" id="8e9fa6c5-994f-4f42-b10e-3f24ffb2266e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Gateway/src/main/java/com/example/realestate/security/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Gateway/src/main/java/com/example/realestate/security/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Gateway/src/main/java/com/example/realestate/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Gateway/src/main/java/com/example/realestate/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/User/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/User/UserClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/User/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/User/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/config/CorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/config/FeignClientInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/config/FeignClientInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/controller/OffreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/controller/OffreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/entity/Offre.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/entity/Offre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/mapper/OffreMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/mapper/OffreMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/repository/OffreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/repository/OffreRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/request/OffreRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/request/OffreRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/response/OffreResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/response/OffreResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/service/OffreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/Offre/src/main/java/com/example/realestate/offre/service/OffreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/config/KeycloakConfigProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/config/KeycloakConfigProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/controller/KeycloakUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/controller/KeycloakUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/request/UserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/request/UserRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/response/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/response/UserResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/service/KeycloakUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/service/KeycloakUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/MyOffresList/MyList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/MyOffresList/MyList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/login/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/register/register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/register/register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/slider/Slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/components/slider/Slider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/listOffresPage/listPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/listOffresPage/listPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/newPostPage/newPostPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/newPostPage/newPostPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/updatePostPage/updatePostPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/routes/updatePostPage/updatePostPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/services/OffreService.js" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/services/OffreService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/services/UserService.js" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_frontend/src/services/UserService.js" afterDir="false" />
     </list>
@@ -55,32 +86,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.RealEstatePrediction_backend: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ConfigServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.DiscoveryApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.GatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.OffreApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.PaymentApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.UserApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/S5/PROJECT_AI_ATLASS_NEWV/Real_Estate_Price_Predictor&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.RealEstatePrediction_backend: Compose Deployment.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.ConfigServerApplication.executor": "Run",
+    "Spring Boot.DiscoveryApplication.executor": "Run",
+    "Spring Boot.GatewayApplication.executor": "Debug",
+    "Spring Boot.OffreApplication.executor": "Run",
+    "Spring Boot.PaymentApplication.executor": "Run",
+    "Spring Boot.UserApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/S5/PROJECT_AI_ATLASS_NEWV/Real_Estate_Price_Predictor",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -194,6 +225,13 @@
       <workItem from="1733495723903" duration="13597000" />
       <workItem from="1733510600220" duration="6484000" />
       <workItem from="1733580265537" duration="3956000" />
+      <workItem from="1733680079185" duration="852000" />
+      <workItem from="1733769545439" duration="9126000" />
+      <workItem from="1733795187943" duration="2216000" />
+      <workItem from="1733837791926" duration="1448000" />
+      <workItem from="1733855538725" duration="14751000" />
+      <workItem from="1733874902698" duration="1753000" />
+      <workItem from="1733878784312" duration="1089000" />
     </task>
     <servers />
   </component>

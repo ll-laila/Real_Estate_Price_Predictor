@@ -44,9 +44,10 @@ public class OffreService {
     @Transactional(rollbackFor = Exception.class)
     public String createOfferWithImmobilier(OffreRequest offreRequest) {
 
-        var user = this.userClient.findByUsername(offreRequest.username());
+//        var user = this.userClient.findByUsername(offreRequest.username());
+        var user = this.userClient.findById(offreRequest.userId());
         if (user == null) {
-            log.error("Utilisateur non trouvé pour l'ID : {}", offreRequest.username());
+            log.error("Utilisateur non trouvé pour l'ID : {}", offreRequest.userId());
             throw new BusinessException("Utilisateur introuvable pour l'ID fourni.");
         }
 
@@ -54,7 +55,7 @@ public class OffreService {
         Immobilier savedImmobilier = immobilierRepository.save(immobilier);
 
         Offre offre = OffreMapper.toOffre(offreRequest);
-        offre.setUsername(offreRequest.username());
+        offre.setUserId(offreRequest.userId());
         offre.setImmobilier(savedImmobilier);
         offre.setDateDePublication(LocalDate.now());
         offre.setDateDeUpdate(LocalDate.now());
@@ -69,12 +70,13 @@ public class OffreService {
         Offre existingOffre = offreRepository.findById(offreId)
                 .orElseThrow(() -> new RuntimeException("Offer not found with id: " + offreId));
 
-        var user = this.userClient.findByUsername(offreRequest.username());
+//        var user = this.userClient.findByUsername(offreRequest.username());
+        var user = this.userClient.findById(offreRequest.userId());
         if (user == null) {
-            log.error("Utilisateur non trouvé pour l'ID : {}", offreRequest.username());
+            log.error("Utilisateur non trouvé pour l'ID : {}", offreRequest.userId());
             throw new BusinessException("Utilisateur introuvable pour l'ID fourni.");
         }
-        if (!existingOffre.getUsername().equals(offreRequest.username())) {
+        if (!existingOffre.getUserId().equals(offreRequest.userId())) {
             throw new RuntimeException("You are not authorized to update this offer.");
         }
         existingOffre.setDateDeUpdate(LocalDate.now());
@@ -113,12 +115,13 @@ public class OffreService {
                 .collect(Collectors.toList());
     }
     //get offers for spécifique user
-    public List<OffreResponse> findOffersByUserName(String username) {
-        List<Offre> offers = offreRepository.findOffreByUsername(username);
+    //get offers for spécifique user
+    public List<OffreResponse> findOffersByUserId(String userId) {
+        List<Offre> offers = offreRepository.findOffreByUserId(userId);
 
         if (offers.isEmpty()) {
-            log.warn("No offers found for user ID: {}", username);
-            throw new BusinessException("Aucune offre trouvée pour l'utilisateur avec l'ID : " + username);
+            log.warn("No offers found for user ID: {}", userId);
+            throw new BusinessException("Aucune offre trouvée pour l'utilisateur avec l'ID : " + userId);
         }
 
         return offers.stream()
