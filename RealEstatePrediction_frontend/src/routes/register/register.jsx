@@ -2,7 +2,7 @@ import "./register.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { request } from "../../helpers/apiService"; 
-import { setAuthHeader } from "../../helpers/apiService"; 
+import { setAuthHeader, setAuthUser } from "../../helpers/apiService"; 
 
 function Register() {
   const navigate = useNavigate(); 
@@ -22,7 +22,7 @@ function Register() {
       [e.target.name]: e.target.value,
     });
   };
-
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
 

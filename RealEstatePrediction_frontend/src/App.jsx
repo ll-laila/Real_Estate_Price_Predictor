@@ -1,4 +1,3 @@
-import HomePage from "./routes/homePage/homePage";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -28,10 +27,6 @@ function App() {
         {
           path:"/",
           element:<Home/>
-        },
-        {
-          path:"/HomePage",
-          element:<HomePage/>
         },
         {
           path:"/Offres",

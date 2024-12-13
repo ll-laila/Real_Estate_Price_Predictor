@@ -3,24 +3,20 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import UserService from "../../services/UserService.js";
 import { FaUser, FaEnvelope, FaPhone } from "react-icons/fa"; // Importation des icônes
+import { getAuthUser } from "../../helpers/apiService"; 
 
 function ProfilePage() {
+
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const userId = 123456; // Remplacer par la logique pour obtenir l'ID de l'utilisateur
-    if (userId) {
-      UserService.getUserById(userId)
-          .then((response) => {
-            setUser(response.data);
-            console.log("User data received:", response.data);
-          })
-          .catch((error) => {
-            console.error("Error fetching user data:", error);
-          });
+    const authUser = getAuthUser();
+    if (authUser) {
+      setUser(authUser);
+      console.log(user);
     }
   }, []);
-
+    
   if (!user) {
     return <div className="loading">Loading user data...</div>;
   }

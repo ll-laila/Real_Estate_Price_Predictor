@@ -85,7 +85,7 @@ function Home() {
                     <button className="getStartedButton" onClick={handleRedirect}>
                         Get Started
                     </button>
-                    <div className="offersSection">
+                   {/* <div className="offersSection">
                         <h2 className="sectionTitle">Top Offers</h2>
                         {loading && <p>Loading offers...</p>}
                         {error && <p>Error: {error}</p>}
@@ -105,7 +105,7 @@ function Home() {
                                 />
                             ))}
                         </div>
-                    </div>
+                    </div>*/}
                 </div>
             </div>
             <div className="imgContainer">

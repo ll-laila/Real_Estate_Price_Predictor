@@ -1,6 +1,32 @@
 // apiService.js
 import axios from 'axios';
 
+
+  
+export const getAuthUser = () => {
+    const user = localStorage.getItem("user");
+    if (user) {
+        try {
+            return JSON.parse(user);
+        } catch (error) {
+            console.error("Error parsing user data:", error);
+            return null;
+        }
+    }
+    return null;
+};
+
+
+
+export const setAuthUser = (user) => {
+    if (user !== null) {
+        localStorage.setItem("user", JSON.stringify(user));
+    } else {
+        window.localStorage.removeItem("user");
+    }
+};
+
+
 export const getAuthToken = () => {
     return window.localStorage.getItem('auth_token');
 };
@@ -13,7 +39,7 @@ export const setAuthHeader = (token) => {
     }
 };
 
-axios.defaults.baseURL = 'http://localhost:8222';
+axios.defaults.baseURL = 'http://localhost:8090';
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 export const request = (method, url, data = {}) => {

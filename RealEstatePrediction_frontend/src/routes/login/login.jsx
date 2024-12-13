@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { request } from "../../helpers/apiService"; 
 import { setAuthHeader } from "../../helpers/apiService"; 
+import { setAuthUser } from "../../helpers/apiService"; 
 
 function Login() {
   const navigate = useNavigate(); 
@@ -10,7 +11,7 @@ function Login() {
     username: "",
     password: "",
   }); 
-
+ 
   const [error, setError] = useState(""); 
 
   const handleChange = (e) => {
@@ -22,11 +23,12 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await request('POST', '/api/v1/users/login', formData);  
       setAuthHeader(response.data.token); 
-      navigate("/HomePage"); 
+      setAuthUser(response.data);
+
+      navigate("/"); 
     } catch (error) {
       setError("Login failed. Please check your credentials.");
       console.error("Error during login:", error);
