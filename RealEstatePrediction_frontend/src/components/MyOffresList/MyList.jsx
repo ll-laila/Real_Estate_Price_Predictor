@@ -9,7 +9,7 @@ function MyList(){
   const [offers, setOffers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const userId = "6758e8867bf2797504d63352";//à remplacer par user ID authentified
+  const userId = "67477a5a7e8cf83850b79b91";//à remplacer par user ID authentified
   useEffect(() => {
     const fetchOffers = async () => {
       try {

@@ -1,19 +1,20 @@
 import "./register.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import UserService from "../../services/UserService"; // Import the UserService
+import { request } from "../../helpers/apiService"; 
+import { setAuthHeader } from "../../helpers/apiService"; 
 
 function Register() {
-  const navigate = useNavigate(); // Hook for redirection
+  const navigate = useNavigate(); 
   const [formData, setFormData] = useState({
     username: "",
-    email: "",
-    password: "",
     firstName: "",
     lastName: "",
+    email: "",
+    password: "",
+    phone: "",
   });
-  const [error, setError] = useState(""); // Error state
-  const [successMessage, setSuccessMessage] = useState(""); // Success state
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     setFormData({
@@ -24,21 +25,14 @@ function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(""); // Reset error messages
-    setSuccessMessage(""); // Reset success messages
 
-    try {
-      // Call the saveUser method from UserService
-      await UserService.saveUser(formData);
-
-      // If successful, set success message and navigate to login
-      setSuccessMessage("Registration successful. Redirecting to login...");
-      setTimeout(() => {
-        navigate("/login"); // Redirect to login page
-      }, 2000); // Redirect after 2 seconds
+    try { 
+      const response = await request('POST', '/api/v1/users/register', formData);
+      setAuthHeader(response.data.token); 
+      navigate("/login"); 
     } catch (error) {
-      console.error("Registration failed:", error);
-      setError("Failed to register. Please check your inputs or try again.");
+      setError("Registration failed. Please try again.");
+      console.error("Error during registration:", error);
     }
   };
 
@@ -52,14 +46,6 @@ function Register() {
             type="text"
             placeholder="Username"
             value={formData.username}
-            onChange={handleChange}
-            required
-          />
-          <input
-            name="email"
-            type="email"
-            placeholder="Email"
-            value={formData.email}
             onChange={handleChange}
             required
           />
@@ -80,6 +66,14 @@ function Register() {
             required
           />
           <input
+            name="email"
+            type="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <input
             name="password"
             type="password"
             placeholder="Password"
@@ -87,8 +81,15 @@ function Register() {
             onChange={handleChange}
             required
           />
-          {error && <p className="error">{error}</p>} {/* Display error message */}
-          {successMessage && <p className="success">{successMessage}</p>} {/* Display success message */}
+          <input
+            name="phone"
+            type="text"
+            placeholder="Phone"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+          />
+          {error && <p className="error">{error}</p>} 
           <button type="submit">Register</button>
           <Link to="/login">Already have an account?</Link>
         </form>

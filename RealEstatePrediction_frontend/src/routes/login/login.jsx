@@ -1,15 +1,17 @@
 import "./login.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import UserService from "../../services/UserService"; // Import the UserService
+import { request } from "../../helpers/apiService"; 
+import { setAuthHeader } from "../../helpers/apiService"; 
 
 function Login() {
-  const navigate = useNavigate(); // Hook for redirection
+  const navigate = useNavigate(); 
   const [formData, setFormData] = useState({
     username: "",
     password: "",
-  });
-  const [error, setError] = useState(""); // Error state
+  }); 
+
+  const [error, setError] = useState(""); 
 
   const handleChange = (e) => {
     setFormData({
@@ -20,26 +22,14 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(""); // Reset any previous error messages
 
     try {
-      const response = await UserService.login(formData.username, formData.password);
-
-      // Check if response contains access_token
-      if (response && response.data.access_token) {
-        // Store the access token in localStorage
-        console.log("Access Token:", response.data.access_token);
-        localStorage.setItem("accessToken", response.data.access_token);
-
-        // Redirect to HomePage after successful login
-        navigate("/HomePage");
-      } else {
-        setError("Login failed. Please check your credentials.");
-      }
+      const response = await request('POST', '/api/v1/users/login', formData);  
+      setAuthHeader(response.data.token); 
+      navigate("/HomePage"); 
     } catch (error) {
-      console.error("Login failed:", error);
-      // Handle server-side or network error
-      setError("Invalid username or password. Please try again.");
+      setError("Login failed. Please check your credentials.");
+      console.error("Error during login:", error);
     }
   };
 
@@ -51,7 +41,7 @@ function Login() {
           <input
             name="username"
             type="text"
-            placeholder="Username or Email"
+            placeholder="Username"
             value={formData.username}
             onChange={handleChange}
             required
@@ -64,7 +54,7 @@ function Login() {
             onChange={handleChange}
             required
           />
-          {error && <p className="error">{error}</p>} {/* Display error message */}
+          {error && <p className="error">{error}</p>} 
           <button type="submit">Login</button>
           <Link to="/register">{"Don't"} have an account?</Link>
         </form>

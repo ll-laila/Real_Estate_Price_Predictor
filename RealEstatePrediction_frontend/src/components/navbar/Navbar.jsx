@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import "./navbar.scss";
 import { Link } from "react-router-dom";
 
+import { getAuthToken } from "../../helpers/apiService"; 
 function Navbar() {
+  const user = getAuthToken(); 
 
-  const user = true;
-  
   return (
       <nav>
         {user? (
@@ -15,7 +15,7 @@ function Navbar() {
                   <img src="/logo.png" alt=""/>
                   <span>LamaEstate</span>
                 </a>
-                <a href="/HomePage">Home</a>
+                <a href="/">Home</a>
                 <a href="/Offres">Offres</a>
                 <a href="/Myspace">My space</a>
                 <a href="/Other">Other</a>
@@ -48,7 +48,12 @@ function Navbar() {
                         <span>LamaEstate</span>
                     </a>
                 </div>
-
+                <div className="right">
+                  <a href="/login" className="register">Sign in</a>
+                  <a href="/register" className="register">
+                    Sign up
+                  </a>
+                </div>
             </>
         )}
       </nav>

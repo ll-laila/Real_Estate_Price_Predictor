@@ -29,19 +29,6 @@ services:
     networks:
       - microservices-net
 
-  keycloak:
-    container_name: keycloak-real-estate
-    image: keycloak/keycloak
-    ports:
-      - 9090:8080
-    environment:
-      KC_BOOTSTRAP_ADMIN_USERNAME: admin
-      KC_BOOTSTRAP_ADMIN_PASSWORD: admin
-    networks:
-      - microservices-net
-    command:
-      - "start-dev"
-
 networks:
   microservices-net:
     driver: bridge

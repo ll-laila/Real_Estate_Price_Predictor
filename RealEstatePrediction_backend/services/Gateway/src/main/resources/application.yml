@@ -1,33 +1,5 @@
 spring:
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: "http://localhost:9090/realms/real-estate"
   config:
     import: optional:configserver:http://localhost:8888
   application:
     name: gateway-service
-  cloud:
-    gateway:
-      globalcors:
-        add-to-simple-url-handler-mapping: true
-  #  security:
-  #    oauth2:
-  #      resourceserver:
-  #        jwt:
-  #          issuer-uri: http://localhost:9090/realms/micro-services
-  #          jwk-set-uri: http://localhost:9090/realms/micro-services/protocol/openid-connect/certs
-
-#  cloud:
-#    gateway:
-#      globalcors:
-#        add-to-simple-url-handler-mapping: true
-#        corsConfigurations:
-#          '[/**]':
-#            allowedOrigins:
-#              - "http://localhost:5173"
-#            allowedMethods:
-#              - "*"
-#            allowedHeaders:
-#              - "*"

@@ -62,13 +62,11 @@
       position: absolute;
       top: 0;
       right: 0;
-      color: white !important; /* Explicitly set the color to white */
+      color: white;
       font-size: 36px;
       font-weight: bold;
       padding: 50px;
       cursor: pointer;
-      background-color: transparent; /* Ensure there's no background */
-      border: none; /* Remove any border styling */
     }
   }
 

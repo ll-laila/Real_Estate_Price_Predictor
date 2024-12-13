@@ -8,7 +8,7 @@ function ProfilePage() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const userId = "6758e8867bf2797504d63352"; // Remplacer par la logique pour obtenir l'ID de l'utilisateur
+    const userId = 123456; // Remplacer par la logique pour obtenir l'ID de l'utilisateur
     if (userId) {
       UserService.getUserById(userId)
           .then((response) => {

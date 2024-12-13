@@ -132,7 +132,7 @@
 
         // Prepare the offer request object matching your backend structure
         const offerRequest = {
-          userId: "6758e8867bf2797504d63352", // Replace with actual user ID
+          userId: "67477a5a7e8cf83850b79b91", // Replace with actual user ID
           immobilierRequest: {
             title: formData.title,
             bedroom: parseInt(formData.bedroom),
