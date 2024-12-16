@@ -24,7 +24,7 @@ function Navbar() {
               <img src="/logo.png" alt="" />
               <span>LamaEstate</span>
             </a>
-            <a href="/">Home</a>
+            <a href="/HomePage">Home</a>
             <a href="/Offres">Offres</a>
             <a href="/Myspace">My space</a>
             <a href="/Other">Other</a>

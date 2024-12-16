@@ -28,7 +28,7 @@ function Login() {
       setAuthHeader(response.data.token); 
       setAuthUser(response.data);
 
-      navigate("/"); 
+      navigate("/homePage");
     } catch (error) {
       setError("Login failed. Please check your credentials.");
       console.error("Error during login:", error);

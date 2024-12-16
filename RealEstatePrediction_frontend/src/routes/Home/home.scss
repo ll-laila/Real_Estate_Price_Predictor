@@ -1,9 +1,6 @@
-@use "../../responsive.scss" as *;
-
 .homePage {
   display: flex;
   height: 100%;
-
 
   .textContainer {
     flex: 3;
@@ -11,65 +8,77 @@
       padding-right: 100px;
       display: flex;
       flex-direction: column;
-      align-items: flex-start; // Aligne le contenu à gauche
-      justify-content: flex-start; // Place le contenu en haut
-      gap: 20px; // Ajuste l'espacement entre les éléments
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 20px;
       height: 100%;
-      margin-top: 20px; // Ajout d'un espacement en haut si nécessaire
-      .getStartedButton {
-        background-color: #fece51;
-        cursor: pointer;
-        border: none;
-        padding: 12px 24px;
-        font-size: 16px;
+      margin-top: 700px; /* Augmentez cette valeur pour descendre davantage */
+      margin-bottom: 20px; /* Si vous voulez un espacement supplémentaire en bas de la section */
+    }
 
-        border-radius: 4px;
-        text-align: center;
-        margin-top: 20px;
-        transition: background-color 0.3s ease;
+    .getStartedButton {
+      background-color: #fece51;
+      cursor: pointer;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 4px;
+      text-align: center;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
 
-        &:hover {
-          background-color: #e1c300; /* Couleur jaune foncé au survol */
-        }
+      &:hover {
+        background-color: #e1c300;
+      }
+    }
+
+    .offersSection {
+      padding: 50px 20px;
+    }
+
+    .sectionTitle {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .offersContainer {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .offer {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 250px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
       }
 
-      @include lg{
-        padding-right: 50px;
+      img {
+        width: 100%;
+        border-radius: 8px;
       }
 
-      @include md{
-        padding: 0;
-      }
-
-      @include sm{
-        justify-content: flex-start;
-      }
-
-      .title {
-        font-size: 40px;
-
-        @include lg {
-          font-size: 48px;
-        }
-      }
-      .offersSection {
-        padding: 50px 20px;
-      }
-
-      .sectionTitle {
-        text-align: center;
-        font-size: 28px;
+      h3 {
+        font-size: 18px;
         font-weight: bold;
-        margin-bottom: 30px;
+        margin: 10px 0;
       }
 
-      .offersContainer {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
+      p {
+        font-size: 14px;
+        color: #555;
+        margin: 5px 0;
       }
-
     }
   }
 
@@ -80,19 +89,10 @@
     display: flex;
     align-items: center;
 
-    @include md {
-      display: none;
-    }
-
     img {
       width: 115%;
       position: absolute;
       right: 0;
-
-      @include lg {
-        width: 105%;
-      }
     }
   }
-
 }
