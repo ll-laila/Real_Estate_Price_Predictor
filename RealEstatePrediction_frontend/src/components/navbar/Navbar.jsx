@@ -43,12 +43,16 @@ function Navbar() {
                   <path d="..."></path>
                 </svg>
               </span>
-              <Link to="/profile" className="profile">
-                <span>My Profile</span>
-              </Link>
-              <Link onClick={handleLogout} className="profile">
-                <span>Logout</span>
-              </Link>
+              <div class="btn-wrap">
+              <a href="/profile" class="btn-accent">
+                Profile
+              </a>
+            </div>
+            <div class="btn-wrap">
+              <a onClick={handleLogout}  class="btn-accent">
+                 Logout
+              </a>
+            </div>
             </div>
           </div>
         </>
@@ -61,10 +65,16 @@ function Navbar() {
             </a>
           </div>
           <div className="right">
-            <a href="/login" className="register">Sign in</a>
-            <a href="/register" className="register">
-              Sign up
-            </a>
+            <div class="btn-wrap">
+              <a href="/login" class="btn-accent">
+                Sign in
+              </a>
+            </div>
+            <div class="btn-wrap">
+              <a href="/register" class="btn-accent">
+                Sign up
+              </a>
+            </div>
           </div>
         </>
       )}

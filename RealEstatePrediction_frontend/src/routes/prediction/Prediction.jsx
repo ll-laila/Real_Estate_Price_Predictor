@@ -3,11 +3,26 @@ import React from "react";
 import Pracing from "../../components/payment/Pracing";
 import "./Prediction.scss";
 import { useParams } from "react-router-dom";
-import OffreService from "../../services/OffreService";
-import PaymentService from "../../services/PaymentService";
+import { getAuthUser } from "../../helpers/apiService";
+import { request } from "../../helpers/apiService"; 
+
 
 function Prediction() {
-  const userId = "6749a2da6dc00c756ad0d6d1";
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const authUser = getAuthUser();
+    if (authUser) {
+      setUser(authUser);
+      console.log(user);
+    }
+  }, []);
+
+  if (!user) {
+    return <div className="loading">Loading user data...</div>;
+  }
+
+  const userId = authUser.id;
   const { id } = useParams();
   const [city, setCity] = useState("");
   const [price, setPrice] = useState("");
@@ -22,7 +37,7 @@ function Prediction() {
     // Récupérer la souscription de l'utilisateur
     const fetchSubscription = async () => {
       try {
-        const response = await PaymentService.getAllSubscriptions();
+        const response = await request("GET", "/api/v1/users/allSubscriptions");
         const allSubscriptions = response.data;
         const userSubscription = allSubscriptions.find(
           (sub) => sub.userId === userId
@@ -39,12 +54,10 @@ function Prediction() {
       }
     };
 
-    fetchSubscription();
-
     // Récupérer l'offre immobilière
     const fetchOffer = async () => {
       try {
-        const response = await OffreService.getOfferById(id);
+        const response = await request("GET", `/api/v1/users/getOffre/${id}`);
         const offer = response.data;
         setCity(offer.immobilierResponse?.city || "");
         setPrice(offer.immobilierResponse?.price || "");
@@ -55,6 +68,7 @@ function Prediction() {
       }
     };
 
+    fetchSubscription();
     fetchOffer();
   }, [id, userId]);
 
@@ -68,14 +82,18 @@ function Prediction() {
     };
 
     try {
-      const response = await OffreService.predictPrice(predictionRequest);
+      const response = await request(
+        "POST",
+        "/api/v1/users/PredictHousePrice",
+        predictionRequest
+      );
       setPredictionResult(response.data);
       setCity("");
       setPrice("");
       setDateToPredict("");
 
       // dicrémentation du nbrPrediction du subscription de l'utilisateur
-      const response2 = await PaymentService.getAllSubscriptions();
+      const response2 = await request("GET", "/api/v1/users/allSubscriptions");
       const allSubscriptions = response2.data;
       const userSubscription = allSubscriptions.find(
         (sub) => sub.userId === user
@@ -86,12 +104,13 @@ function Prediction() {
         userId: userSubscription.userId,
         nbrPrediction: userSubscription.nbrPrediction - 1,
       };
-      const response3 = await PaymentService.updateSubscription(
+      const response3 = await request(
+        "PUT",
+        "/api/v1/users/updateSubscription",
         UpdateSubscription
       );
       const updatedSubscription = response3.data;
       setSubscription(updatedSubscription);
-      
     } catch (err) {
       setError("Erreur lors de la prédiction du prix");
     }
@@ -102,7 +121,7 @@ function Prediction() {
   };
 
   const closeModal = () => {
-    setPredictionResult(null); 
+    setPredictionResult(null);
   };
 
   if (loading) {

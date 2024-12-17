@@ -16,6 +16,7 @@ import ProfileUpdatePage from "./routes/profileUpdatePage/profileUpdatePage";
 import Prediction from "./routes/prediction/Prediction";
 import UpdatePostPage from "./routes/updatePostPage/updatePostPage";
 import Home from "./routes/Home/home.jsx";
+import HomePage from "./routes/homePage/homePage.jsx";
 
 
 function App() {

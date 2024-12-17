@@ -28,7 +28,7 @@ function Login() {
       setAuthHeader(response.data.token); 
       setAuthUser(response.data);
 
-      navigate("/"); 
+      navigate("/");
     } catch (error) {
       setError("Login failed. Please check your credentials.");
       console.error("Error during login:", error);
@@ -47,7 +47,7 @@ function Login() {
             value={formData.username}
             onChange={handleChange}
             required
-          />
+          /> 
           <input
             name="password"
             type="password"

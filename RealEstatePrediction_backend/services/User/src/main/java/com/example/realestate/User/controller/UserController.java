@@ -174,7 +174,7 @@ public class UserController {
     }
 
 
-    @DeleteMapping("/subscription/{user-id}")
+    @DeleteMapping("/deleteSubscription/{user-id}")
     public ResponseEntity<Void> deleteByIdUser(
             @PathVariable("user-id") String userId)
     {
