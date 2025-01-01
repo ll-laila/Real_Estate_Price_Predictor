@@ -1,6 +1,8 @@
 package com.example.realestate.offre;
 
 
+import com.example.realestate.prediction.PredictionRequest;
+import com.example.realestate.prediction.PredictionResponse;
 import jakarta.validation.Valid;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +12,7 @@ import java.util.List;
 
 @FeignClient(
         name = "offre-service",
-        url = "${application.config.offres-url}"
+        url = "http://localhost:8050/api/v1/offres"
 )
 public interface OffreClient {
 
@@ -42,6 +44,8 @@ public interface OffreClient {
     public List<OffreResponse> searchOffresByCity(@RequestParam String city);
 
 
+    @PostMapping("/predictHousePrice")
+    public PredictionResponse predictHousePrice(@RequestBody PredictionRequest request);
 
 
 }

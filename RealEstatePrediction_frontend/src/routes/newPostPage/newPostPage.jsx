@@ -1,17 +1,29 @@
-  import React, { useState } from 'react';
+  import React, { useState, useEffect } from 'react';
   import { useNavigate } from 'react-router-dom';
   import "./newPostPage.scss";
-  import OffreService from '../../services/OffreService';
   import { popularCities } from "../../lib/dummydata";
+  import { getAuthUser } from "../../helpers/apiService"; 
+  import { request } from "../../helpers/apiService"; 
+
 
   function NewPostPage() {
+
+    const [user, setUser] = useState(null);
+
+    useEffect(() => {
+      const authUser = getAuthUser();
+      if (authUser) {
+        setUser(authUser);
+      }
+    }, []);
+
     const navigate = useNavigate();
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const [formData, setFormData] = useState({
       title: '',
       price: '',
-      images: [], // img to images array
+      images: [], 
       address: '',
       city: '',
       bedroom: 1,
@@ -28,7 +40,7 @@
       schoolDistance: '',
       busDistance: '',
       restaurantDistance: '',
-      userId: '' // You'll need to replace this with actual user ID
+      userId: '' 
     });
 
     const [imagePreviews, setImagePreviews] = useState([]);
@@ -44,7 +56,6 @@
     const handleImageUpload = (e) => {
       const files = Array.from(e.target.files);
 
-      // Validate file types and sizes
       const validTypes = ['image/jpeg', 'image/png', 'image/gif'];
       const maxSize = 5 * 1024 * 1024; // 5MB
 
@@ -75,24 +86,24 @@
       const previews = validFiles.map((file, index) => ({
         file,
         previewUrl: URL.createObjectURL(file),
-        index: formData.images.length + index + 1, // Image number (1, 2, 3, 4)
+        index: formData.images.length + index + 1,
       }));
 
       // Update the formData and imagePreviews
       setFormData(prevState => ({
         ...prevState,
-        images: [...prevState.images, ...validFiles], // Add images incrementally
+        images: [...prevState.images, ...validFiles], 
       }));
 
       setImagePreviews(prevState => [
-        ...prevState, ...previews // Update image previews with file preview URLs and indices
+        ...prevState, ...previews 
       ]);
     };
     const handleRemoveImage = (index) => {
       // Remove the selected image based on index
       setFormData((prevState) => {
         const updatedImages = [...prevState.images];
-        updatedImages.splice(index, 1); // Remove the image at the selected index
+        updatedImages.splice(index, 1);
         return {
           ...prevState,
           images: updatedImages,
@@ -101,7 +112,7 @@
     
       setImagePreviews((prevState) => {
         const updatedPreviews = [...prevState];
-        updatedPreviews.splice(index, 1); // Remove the preview at the selected index
+        updatedPreviews.splice(index, 1); 
         return updatedPreviews;
       });
     };
@@ -132,11 +143,11 @@
 
         // Prepare the offer request object matching your backend structure
         const offerRequest = {
-          userId: "67477a5a7e8cf83850b79b91", // Replace with actual user ID
+          userId: user.id, 
           immobilierRequest: {
             title: formData.title,
             bedroom: parseInt(formData.bedroom),
-            images: imagesBase64, // Send base64 encoded images
+            images: imagesBase64,
             bathroom: parseInt(formData.bathroom),
             price: parseFloat(formData.price),
             address: formData.address,
@@ -157,10 +168,10 @@
         };
 
         // Send POST request to backend
-        const response = await OffreService.saveOffer(offerRequest);
+        const response = await request('POST', '/api/v1/users/addOffre', offerRequest);
 
         if (response && response.data) {
-          alert('Offer created successfully! Offer ID: ' + response.data);
+          //alert('Offer created successfully! Offer ID: ' + response.data);
           navigate('/Myspace');
         } else {
           throw new Error('Failed to create offer.');
@@ -199,7 +210,7 @@
                   type="file" 
                   accept="image/jpeg,image/png,image/gif"
                   onChange={handleImageUpload}
-                  multiple // Allow multiple file selection
+                  multiple
                   required 
                 />
                 {imagePreviews.length > 0 && (

@@ -1,23 +1,45 @@
 import React, { useEffect, useState } from "react";
-import OffreService from "../../services/OffreService";
 import Card from "../../components/cardOffre/Card";
 import Map from "../../components/map/Map";
 import "./listPage.scss";
+import { getAuthUser } from "../../helpers/apiService"; 
+import { request } from "../../helpers/apiService"; 
 
-// Liste des villes (vous pouvez l'étendre si nécessaire)
+
 const cities = [
-  "New York", "Los Angeles", "Chicago", "Houston", "Phoenix", 
-  "Philadelphia", "San Antonio", "San Diego", "Dallas", "San Francisco",
-  "Miami", "Seattle", "Las Vegas", "Atlanta", "Boston", "Washington, D.C.",
-  "Denver", "Orlando", "Detroit", "Austin", "Nashville", "Portland",
-  "Baltimore", "Salt Lake City", "Charlotte"
+  "New York",
+  "Los Angeles",
+  "Chicago",
+  "Houston",
+  "Phoenix",
+  "Philadelphia",
+  "San Antonio",
+  "San Diego",
+  "Dallas",
+  "San Francisco",
+  "Miami",
+  "Seattle",
+  "Las Vegas",
+  "Atlanta",
+  "Boston",
+  "Washington, D.C.",
+  "Denver",
+  "Orlando",
+  "Detroit",
+  "Austin",
+  "Nashville",
+  "Portland",
+  "Baltimore",
+  "Salt Lake City",
+  "Charlotte",
 ];
 
 const ListPage = () => {
+  const [user, setUser] = useState(null);
   const [offres, setOffres] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [filters, setFilters] = useState({ city: "" }); // Initialiser avec un filtre par défaut
+  const [filters, setFilters] = useState({ city: "" }); 
 
   const fetchOffres = async () => {
     setLoading(true);
@@ -25,13 +47,12 @@ const ListPage = () => {
     try {
       let response;
       if (filters.city) {
-        // Appeler la méthode filtrée si un filtre de ville est défini
-        response = await OffreService.getFilteredOffres(filters);
-        console.log("Réponse après filtre city:", response); // Ajout d'une vérification de la réponse
+        const queryString = new URLSearchParams(filters).toString();
+        response = await request("GET", `/api/v1/users/search?${queryString}`);
+        console.log("Réponse après filtre city:", response); 
         setOffres(response.data);
       } else {
-        // Sinon, récupérer toutes les offres
-        response = await OffreService.getAllOffres();
+        response = await request("GET", "/api/v1/users/allOffers");
         setOffres(response.data);
       }
     } catch (err) {
@@ -41,12 +62,22 @@ const ListPage = () => {
     }
   };
 
+
+  useEffect(() => {
+    const authUser = getAuthUser();
+    if (authUser) {
+      setUser(authUser);
+      console.log(user);
+    }
+  }, []);
+
+
   useEffect(() => {
     fetchOffres();
-  }, [filters]); // Recharger les offres lorsque les filtres changent
+  }, [filters]); 
 
   const handleFilterChange = (newFilters) => {
-    setFilters(newFilters); // Mettre à jour les filtres
+    setFilters(newFilters); 
   };
 
   if (loading) return <p>Chargement des offres...</p>;
@@ -82,32 +113,34 @@ const ListPage = () => {
           {/* Affichage des offres */}
           {offres && offres.length > 0 ? (
             offres.map((offre) => {
-  const { immobilierResponse } = offre;
-  console.log(immobilierResponse,"je suis immobiler response")
-  const { title, address, price, bedroom, bathroom, images } = immobilierResponse || {};
+              const { immobilierResponse } = offre;
+              console.log(immobilierResponse, "je suis immobiler response");
+              const { title, address, price, bedroom, bathroom, images } =
+                immobilierResponse || {};
 
-  const imageUrl = images?.length > 0 ? images[0] : "https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
+              const imageUrl =
+                images?.length > 0
+                  ? images[0]
+                  : "https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
 
-  return (
-    <Card
-      key={offre.id}
-      item={{
-        id: offre.id,
-        img: imageUrl,
-        title: title || "Titre non disponible",
-        address: address || "Adresse non disponible",
-        price: price || "Prix non disponible",
-        bedroom: bedroom || 0,
-        bathroom: bathroom || 0,
-      }}
-    />
-  );
-})
-
-  ) : (
-    <p>Aucune offre disponible</p>
-  )}
-
+              return (
+                <Card
+                  key={offre.id}
+                  item={{
+                    id: offre.id,
+                    img: imageUrl,
+                    title: title || "Titre non disponible",
+                    address: address || "Adresse non disponible",
+                    price: price || "Prix non disponible",
+                    bedroom: bedroom || 0,
+                    bathroom: bathroom || 0,
+                  }}
+                />
+              );
+            })
+          ) : (
+            <p>Aucune offre disponible</p>
+          )}
         </div>
       </div>
 

@@ -3,9 +3,10 @@ import Slider from "../../components/slider/Slider";
 import Map from "../../components/map/Map";
 import { userData } from "../../lib/dummydata"; // Supposé que 'userData' est fourni quelque part
 import Chat from "../../components/chat/Chat";
-import OffreService from "../../services/OffreService";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { request } from "../../helpers/apiService"; 
+
 
 function SingleOffrePage() {
   // État pour les détails de l'offre, le chargement et l'erreur
@@ -13,20 +14,15 @@ function SingleOffrePage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // Récupérer l'ID de l'offre depuis l'URL
   const { id } = useParams();
 
-  // Fonction pour récupérer les détails de l'offre
   const getOffreDetails = async () => {
     setLoading(true);
     setError(null);
     try {
       let response;
-      response = await OffreService.getOfferById(id);
-
-
+      response = await request("GET", `/api/v1/users/getOffre/${id}`);
       setOffre(response.data);
-
     } catch (err) {
       setError(err.message);
     } finally {    
@@ -34,28 +30,24 @@ function SingleOffrePage() {
     }
   };
 
-  // Utiliser useEffect pour appeler la fonction lors du chargement du composant
+
   useEffect(() => {
     getOffreDetails();
-    console.log("Offre loaded:", offre);  // Affiche l'objet 'offre' quand il est mis à jour
+    console.log("Offre loaded:", offre);  
 
   }, [id]);
 
-    // Utiliser un autre useEffect pour observer les changements de 'offre'
     useEffect(() => {
-      console.log("Offre loaded:", offre);  // Affiche 'offre' quand il est mis à jour
+      console.log("Offre loaded:", offre);  
     }, [offre]);
 
-  // Si les données sont en cours de chargement
   if (loading) return <div>Loading...</div>;
 
-  // Si une erreur s'est produite lors de la récupération des données
   if (error) return <div>Error: {error}</div>;
 
-  // Si aucune offre n'est trouvée
   if (!offre) return <div>Offer not found</div>;
 
-  const immobilierResponse = offre?.immobilierResponse || {}; // Vérifiez si `immobilierResponse` existe
+  const immobilierResponse = offre?.immobilierResponse || {};
 
   return (
     <div className="singlePage">

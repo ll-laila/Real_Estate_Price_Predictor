@@ -6,12 +6,15 @@ import com.example.realestate.offre.service.OffreService;
 import com.example.realestate.prediction.PredictionClient;
 import com.example.realestate.prediction.PredictionRequest;
 import com.example.realestate.prediction.PredictionResponse;
+import feign.FeignException;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -66,15 +69,24 @@ public class OffreController {
 
 
 
-    @PostMapping("/PredictHousePrice")
-    ResponseEntity<PredictionResponse> predictHousePrice(@RequestBody PredictionRequest request){
-        return ResponseEntity.ok(predictionClient.predictHousePrice(request).getBody());
+    @PostMapping("/predictHousePrice")
+    public PredictionResponse predictHousePrice(@RequestBody PredictionRequest request){
+        return predictionClient.predictHousePrice(request).getBody();
     }
+
 
     //get offers by user id
     @GetMapping("/allOffers/{userId}")
     public List<OffreResponse> getOffresByUserId(@PathVariable("userId") String userId) {
-        return offreService.findOffersByUserId(userId);
+        try {
+            List<OffreResponse> offres = offreService.findOffersByUserId(userId);
+            if (offres == null || offres.isEmpty()) {
+                return new ArrayList<>();
+            }
+            return offres;
+        } catch (FeignException e) {
+            return new ArrayList<>();
+        }
     }
 
 

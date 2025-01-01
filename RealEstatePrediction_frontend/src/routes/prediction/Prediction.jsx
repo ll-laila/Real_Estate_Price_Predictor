@@ -1,29 +1,35 @@
 import { useState, useEffect } from "react";
 import React from "react";
-import Pracing from "../../components/payment/Pracing";
-import "./Prediction.scss";
+import { useNavigate } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import { getAuthUser } from "../../helpers/apiService";
-import { request } from "../../helpers/apiService"; 
+import { request } from "../../helpers/apiService";
+import Pracing from "../../components/payment/Pracing";
 
 
 function Prediction() {
   const [user, setUser] = useState(null);
-
   useEffect(() => {
-    const authUser = getAuthUser();
-    if (authUser) {
-      setUser(authUser);
-      console.log(user);
-    }
+    const getUser = async () => {
+      const authUser = getAuthUser();
+      if (authUser) {
+        console.log(user);
+        try {
+          const response = await request("GET", `/api/v1/users/${authUser.id}`);
+          setUser(response.data);
+        } catch (err) {
+          setError(err.message);
+        }
+      }
+    };
+    getUser();
   }, []);
 
-  if (!user) {
-    return <div className="loading">Loading user data...</div>;
-  }
+  console.log(user);
 
-  const userId = authUser.id;
   const { id } = useParams();
+  console.log(id);
+  const navigate = useNavigate();
   const [city, setCity] = useState("");
   const [price, setPrice] = useState("");
   const [dateToPredict, setDateToPredict] = useState("");
@@ -33,28 +39,26 @@ function Prediction() {
   const [predictionResult, setPredictionResult] = useState(null);
   const [subscription, setSubscription] = useState(null);
 
+
+
   useEffect(() => {
-    // Récupérer la souscription de l'utilisateur
+    if (!user) return;
     const fetchSubscription = async () => {
       try {
         const response = await request("GET", "/api/v1/users/allSubscriptions");
         const allSubscriptions = response.data;
         const userSubscription = allSubscriptions.find(
-          (sub) => sub.userId === userId
+          (sub) => sub.userId === user.id
         );
-        if (!userSubscription || userSubscription.nbrPrediction === 0) {
-          setShow(false);
-        } else {
-          setShow(true);
-        }
+        console.log(allSubscriptions);
+        console.log(userSubscription);
 
-        setSubscription(userSubscription);
+        setShow(userSubscription?.nbrPrediction > 0);
+        setSubscription(userSubscription || null);
       } catch (err) {
         setError("Erreur lors de la récupération de la souscription");
       }
     };
-
-    // Récupérer l'offre immobilière
     const fetchOffer = async () => {
       try {
         const response = await request("GET", `/api/v1/users/getOffre/${id}`);
@@ -67,36 +71,41 @@ function Prediction() {
         setLoading(false);
       }
     };
-
     fetchSubscription();
     fetchOffer();
-  }, [id, userId]);
+  }, [id , user]);
+
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const predictionRequest = {
-      city: city,
-      date_to_predict: dateToPredict,
+    const payload = {
       current_price: parseFloat(price),
+      date_to_predict: new Date(dateToPredict).toISOString().split("T")[0],
+      city: city,
     };
 
     try {
-      const response = await request(
-        "POST",
-        "/api/v1/users/PredictHousePrice",
-        predictionRequest
-      );
-      setPredictionResult(response.data);
+      const response = await fetch("http://localhost:8000/api/predict/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+      const data = await response.json();
+      setPredictionResult(data);
+      console.log("data: ",data);
       setCity("");
       setPrice("");
       setDateToPredict("");
 
       // dicrémentation du nbrPrediction du subscription de l'utilisateur
-      const response2 = await request("GET", "/api/v1/users/allSubscriptions");
+     const response2 = await request("GET", "/api/v1/users/allSubscriptions");
       const allSubscriptions = response2.data;
       const userSubscription = allSubscriptions.find(
-        (sub) => sub.userId === user
+        (sub) => sub.userId === user.id
       );
 
       const UpdateSubscription = {
@@ -111,10 +120,16 @@ function Prediction() {
       );
       const updatedSubscription = response3.data;
       setSubscription(updatedSubscription);
+      
     } catch (err) {
       setError("Erreur lors de la prédiction du prix");
     }
   };
+
+
+
+
+
 
   const getIsFormValid = () => {
     return city && price && dateToPredict;
@@ -206,7 +221,7 @@ function Prediction() {
           )}
         </div>
       ) : (
-        <Pracing usreId={userId} />
+        <Pracing usreId={user.id} />
       )}
 
       {error && <p className="error">{error}</p>}

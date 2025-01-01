@@ -9,7 +9,7 @@ import java.util.List;
 
 @FeignClient(
         name = "payment-service",
-        url = "${application.config.payments-url}"
+        url = "http://localhost:8070/api/v1/planSubscription"
 )
 public interface PaymentClient {
 

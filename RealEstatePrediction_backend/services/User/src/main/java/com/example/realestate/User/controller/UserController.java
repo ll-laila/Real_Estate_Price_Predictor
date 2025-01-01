@@ -105,9 +105,10 @@ public class UserController {
 
     //---------------------------------Prediction------------------------------------//
 
-    @PostMapping("/PredictHousePrice")
-    ResponseEntity<PredictionResponse> predictHousePrice(@RequestBody PredictionRequest request){
-        return ResponseEntity.ok(predictionClient.predictHousePrice(request).getBody());
+
+    @PostMapping("/predict")
+    public ResponseEntity<PredictionResponse> predictHousePrice(@RequestBody PredictionRequest request){
+        return ResponseEntity.ok(offreClient.predictHousePrice(request));
     }
 
 

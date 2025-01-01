@@ -4,9 +4,29 @@ import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "./CheckoutForm";
 import { loadStripe } from "@stripe/stripe-js";
 import { request } from "../../helpers/apiService"; 
+import { getAuthUser } from "../../helpers/apiService";
 
 
 function Pracing({ userId }) {
+
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    const getUser = async () => {
+      const authUser = getAuthUser();
+      if (authUser) {
+        console.log(user);
+        try {
+          const response = await request("GET", `/api/v1/users/${authUser.id}`);
+          setUser(response.data);
+        } catch (err) {
+          setError(err.message);
+        }
+      }
+    };
+    getUser();
+  }, []);
+
+
   const [showForm, setShowForm] = useState(true);
   const [pricePlan, setPricePlan] = useState(0);
   const [namePlan, setNamePlan] = useState("");
@@ -20,7 +40,7 @@ function Pracing({ userId }) {
   
     const newSubscription = {
       namePlan: name,
-      userId: userId,  
+      userId: user.id,  
       nbrPrediction: 0,
     };
   
@@ -33,11 +53,10 @@ function Pracing({ userId }) {
         const allSubscriptions = response.data;
   
         // Chercher la souscription de l'utilisateur
-        const userSubscription = allSubscriptions.find(sub => sub.userId === userId);
+        const userSubscription = allSubscriptions.find(sub => sub.userId === user.id);
         if (userSubscription) {
           // Supprimer la dernière souscription de l'utilisateur
-          await request('DELETE', `/api/v1/users/deleteSubscription/${userId}`); 
-
+          await request('DELETE', `/api/v1/users/deleteSubscription/${user.id}`); 
           console.log("Ancienne souscription supprimée avec succès.");
         }
   
