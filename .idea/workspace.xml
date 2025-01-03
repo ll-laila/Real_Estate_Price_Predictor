@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8e9fa6c5-994f-4f42-b10e-3f24ffb2266e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/RealEstatePrediction_backend/services/User/src/main/java/com/example/realestate/User/config/WebConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,6 +211,7 @@
       <workItem from="1734090553060" duration="20000" />
       <workItem from="1734348860866" duration="9575000" />
       <workItem from="1735818498629" duration="10759000" />
+      <workItem from="1735901345644" duration="5621000" />
     </task>
     <servers />
   </component>

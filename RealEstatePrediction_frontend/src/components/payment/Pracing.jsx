@@ -80,7 +80,7 @@ function Pracing({ userId }) {
 
   useEffect(() => {
     //https://stripeproject.onrender.com
-    fetch("http://localhost:5252/config").then(async (r) => {
+    fetch("https://stripeproject.onrender.com/config").then(async (r) => {
       const { publishableKey } = await r.json();
       setStripePromise(loadStripe(publishableKey));
     });
@@ -88,7 +88,7 @@ function Pracing({ userId }) {
 
   useEffect(() => {
     if (pricePlan) {
-      fetch(`http://localhost:5252/create-payment-intent/${pricePlan * 100}`, {
+      fetch(`https://stripeproject.onrender.com/create-payment-intent/${pricePlan * 100}`, {
         method: "POST",
       }).then(async (result) => {
         const { clientSecret } = await result.json();
