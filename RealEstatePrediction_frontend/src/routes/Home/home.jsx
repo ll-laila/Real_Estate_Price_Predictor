@@ -26,12 +26,12 @@ function Home() {
           </div>
           <figure>
             <img
-              src="images/main-banner.png"
+              src="back1.png"
               alt="banner"
               class="banner-image"
             />
           </figure>
-        </div>
+        </div> 
       </section>
 
       <section id="about">

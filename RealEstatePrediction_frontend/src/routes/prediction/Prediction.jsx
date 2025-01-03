@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { getAuthUser } from "../../helpers/apiService";
 import { request } from "../../helpers/apiService";
 import Pracing from "../../components/payment/Pracing";
-
+import "./Prediction.scss";
 
 function Prediction() {
   const [user, setUser] = useState(null);
@@ -76,7 +76,7 @@ function Prediction() {
   }, [id , user]);
 
 
-
+ 
 
   const handleSubmit = async (e) => {
     e.preventDefault();

@@ -13,6 +13,8 @@ function SingleOffrePage() {
   const [offre, setOffre] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [seller, setSeller] = useState(null);
+
 
   const { id } = useParams();
 
@@ -23,6 +25,7 @@ function SingleOffrePage() {
       let response;
       response = await request("GET", `/api/v1/users/getOffre/${id}`);
       setOffre(response.data);
+      console.log(offre);
     } catch (err) {
       setError(err.message);
     } finally {    
@@ -31,8 +34,21 @@ function SingleOffrePage() {
   };
 
 
+  const getSeller = async () => {
+    try {
+      let response;
+      response = await request("GET", `/api/v1/users/${offre.userId}`);
+      setSeller(response.data);
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+
+
   useEffect(() => {
     getOffreDetails();
+    getSeller();
     console.log("Offre loaded:", offre);  
 
   }, [id]);
@@ -50,7 +66,7 @@ function SingleOffrePage() {
   const immobilierResponse = offre?.immobilierResponse || {};
 
   return (
-    <div className="singlePage">
+    <div className="singlePage" >
       <div className="details">
         <div className="wrapper">
           {/* Slider */}
@@ -72,10 +88,16 @@ function SingleOffrePage() {
               </div>
             </div>
             <div className="bottom">{immobilierResponse?.description || 'No Description Available'}</div>
+            <div className="chatContainer">
+              <div className="wrapper">
+                <Chat seller={seller} />
+              </div>
+            </div>
           </div>
-        </div>
+        </div> 
       </div>
-
+   
+      
 
         {/* Chat 
         <div className="chatContainer">
@@ -89,6 +111,7 @@ function SingleOffrePage() {
       <div className="features">
         <div className="wrapper">
           <p className="title">General</p>
+  
           <div className="listVertical">
             <div className="feature">
               <img src="/utility.png" alt="" />
@@ -104,18 +127,31 @@ function SingleOffrePage() {
                 <p>{immobilierResponse?.petPolicy || "Pets Allowed"}</p>
               </div>
             </div>
-
+            <div className="feature">
+              <img src="/fee.png" alt="" />
+              <div className="featureText">
+                <span>Property Fees</span>
+                <p>{immobilierResponse?.incomePolicy || "Pets Allowed"}</p>
+              </div>
+            </div>
           </div>
 
+
+
           <p className="title">Sizes</p>
+  
           <div className="sizes">
             <div className="size">
               <img src="/size.png" alt="" />
               <span>{immobilierResponse?.size || "80 sqft"}</span>
             </div>
             <div className="size">
+              <img src="/bed.png" alt="" />
+              <span> {immobilierResponse?.bedroom} {immobilierResponse?.bedroom == 1 ? "bedroom" : "bedrooms" } </span>
+            </div>
+            <div className="size">
               <img src="/bath.png" alt="" />
-              <span>{immobilierResponse?.bathroom || "1 bathroom"}</span>
+              <span> {immobilierResponse?.bathroom } {immobilierResponse?.bathroom  == 1 ? "bedroom" : "bedrooms" } </span>
             </div>
           </div>
 

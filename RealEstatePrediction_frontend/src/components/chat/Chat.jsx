@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./chat.scss";
 
-function Chat() {
+function Chat({ seller }) {
   const [chat, setChat] = useState(true);
   return (
     <div className="chat">
@@ -9,13 +9,14 @@ function Chat() {
         <h1>Contact seller</h1>
         <div className="message">
           <img
-            src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            src="/seller.webp"
             alt=""
           />
-          <span>John Doe</span>
-          <p>Lorem ipsum dolor sit amet...</p>
+          <span>{seller.firstName}{" "}{seller.lastName}</span>
+          <span>{seller.email}</span>
+          <span>{seller.phone}</span>
         </div>
-        <div className="message">
+    {/*    <div className="message">
           <img
             src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             alt=""
@@ -116,6 +117,8 @@ function Chat() {
           </div>
         </div>
       )}
+      */}
+    </div>
     </div>
   );
 }

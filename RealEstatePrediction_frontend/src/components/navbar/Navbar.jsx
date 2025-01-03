@@ -22,12 +22,12 @@ function Navbar() {
           <div className="left">
             <a href="/" className="logo">
               <img src="/logo.png" alt="" />
-              <span>LamaEstate</span>
+              <span style={{fontSize: "24px"}}>LamaEstate</span>
             </a>
-            <a href="/">Home</a>
-            <a href="/Offres">Offres</a>
-            <a href="/Myspace">My space</a>
-            <a href="/Other">Other</a>
+            <a href="/" style={{fontSize: "19px"}}>Home</a>
+            <a href="/Offres" style={{fontSize: "19px"}}>Offres</a>
+            <a href="/Myspace" style={{fontSize: "19px"}}>My space</a>
+            <a href="/Other" style={{fontSize: "19px"}}>FAQ</a>
           </div>
           <div className="right">
             <div className="user">
@@ -44,12 +44,12 @@ function Navbar() {
                 </svg>
               </span>
               <div class="btn-wrap">
-              <a href="/profile" class="btn-accent">
+              <a href="/profile" class="btn-accent" style={{fontSize: "17px"}}>
                 Profile
               </a>
             </div>
             <div class="btn-wrap">
-              <a onClick={handleLogout}  class="btn-accent">
+              <a onClick={handleLogout}  class="btn-accent" style={{fontSize: "17px"}}>
                  Logout
               </a>
             </div>
@@ -66,7 +66,7 @@ function Navbar() {
           </div>
           <div className="right">
             <div class="btn-wrap">
-              <a href="/login" class="btn-accent">
+              <a href="/login" class="btn-accent" >
                 Sign in
               </a>
             </div>

@@ -50,7 +50,7 @@ function SingleMyOffrePage() {
 
   const { title, images, description,bedroom, bathroom, price, address, city, size, schoolDistance, busDistance, restaurantDistance, type, property, utilities, petPolicy, incomePolicy } = immobilier;
   return (
-    <div className="singlePage">
+    <div className="singlePage"  style={{ paddingTop: "20px" }} >
        {/* Details offre */}
       <div className="details">
         <div className="wrapper">
@@ -68,9 +68,11 @@ function SingleMyOffrePage() {
 
               <div className="buttons">
                 <Link to={`/UpdateOffre/${offerdata.id}`}>
-                  <button>Update Your Post</button>
+                  <button>Update</button>
                 </Link>
-                <button onClick={deleteOffer}>Delete</button>
+                <Link>
+                  <button onClick={deleteOffer}>Delete</button>
+                </Link>
               </div>
 
             </div>

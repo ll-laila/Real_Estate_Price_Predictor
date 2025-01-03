@@ -43,7 +43,7 @@ function MyList() {
   }
 
   return (
-    <div className='list'>
+    <div className='list'  style={{ paddingTop: "40px" }} >
       {offers.length > 0 ? (
         offers.map((item) => <CardMyOffre key={item.id} item={item} />)
       ) : (

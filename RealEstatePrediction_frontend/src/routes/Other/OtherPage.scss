@@ -1,28 +1,4 @@
-
 @import url(https://fonts.googleapis.com/css?family=Raleway);
-
-/* Pour le conteneur principal */
-.container {
-  display: flex;
-  justify-content: space-between; /* Assure qu'il y a un espace égal entre les sections */
-  align-items: flex-start; /* Aligne les éléments en haut */
-  padding: 24px; /* Ajoute un peu d'espace autour du conteneur */
-}
-
-/* Les deux sections gauche et droite auront la même taille */
-.left, .right {
-  flex: 1; /* Les deux sections auront une taille égale */
-  padding: 20px; /* Vous pouvez ajuster l'espace intérieur si nécessaire */
-}
-
-/* Optional: Si vous voulez ajuster l'image dans la section droite */
-.right img {
-  width: 100%; /* L'image prend toute la largeur disponible */
-  height: auto; /* Garde l'aspect de l'image */
-}
-
-
-
 
 body {
   color: #333;
@@ -35,8 +11,6 @@ body {
   font-size: 42px;
   border-bottom: 1px dotted #ccc;
   padding: 24px;
-  display: flex;         
-  align-items: center;  
 }
 
 .faq-content {
@@ -106,38 +80,4 @@ body {
 
 .panel {
   display: none;
-}
-
-
-.updateButton {
-  padding: 10px 20px;
-  background-color: #000000;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 20px;
-
-}
-
-.profile-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-  margin-right: 16px; 
-
-  .profile-avatar {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-  }
-
-  .profile-name {
-    font-size: 30px;
-    font-weight: bold;
-  }
-
 }

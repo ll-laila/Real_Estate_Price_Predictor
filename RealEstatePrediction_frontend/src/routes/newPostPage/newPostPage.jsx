@@ -186,9 +186,9 @@
     };
 
     return (
-      <div className="newPostPage">
+      <div className="newPostPage" >
         <div className="formContainer">
-          <h1>Add New Post</h1>
+          <h1>Add New Post</h1><hr/>
           <div className="wrapper">
             <form onSubmit={handleSubmit}>
               <div className="item">
@@ -202,42 +202,7 @@
                   required 
                 />
               </div>
-              <div className="item imageUploadItem">
-                <label htmlFor="imageUpload">Property Images (Exactly 4 Required)</label>
-                <input 
-                  id="imageUpload" 
-                  name="images" 
-                  type="file" 
-                  accept="image/jpeg,image/png,image/gif"
-                  onChange={handleImageUpload}
-                  multiple
-                  required 
-                />
-                {imagePreviews.length > 0 && (
-                  <div className="imagePreviewContainer">
-                    {imagePreviews.map((preview, index) => (
-                      <div key={index} className="imagePreview" style={{ position: 'relative' }}>
-                        {/* Close Button */}
-                        <button
-                          type="button"
-                          className="closeIconButton"
-                          onClick={() => handleRemoveImage(index)}
-                        >
-                          ✕ {/* X icon */}
-                        </button>
-                        {/* Image Preview */}
-                        <img
-                          src={preview.previewUrl}
-                          alt={`Property Image ${index + 1}`}
-                          style={{ maxWidth: '150px', maxHeight: '150px', margin: '5px' }}
-                        />
-                        <div>Image {index + 1}</div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-                <div className="imageCount">{imagePreviews.length} / 4 images selected</div>
-              </div>
+
               <div className="item">
                 <label htmlFor="price">Price</label>
                 <input 
@@ -323,21 +288,7 @@
                   required 
                 />
               </div>
-              <div className="item descriptionItem">
-                <label htmlFor="description">Description</label>
-                <textarea
-                  id="description"
-                  name="description"
-                  value={formData.description}
-                  onChange={handleChange}
-                  rows="6" // Increases the height of the textarea
-                  maxLength="2000" // Limits the maximum number of characters
-                  required
-                />
-                <div className="characterCount">
-                  {formData.description.length} / 2000 characters
-                </div>
-              </div>
+
               <div className="item">
                 <label htmlFor="type">Type</label>
                 <select 
@@ -445,13 +396,95 @@
                   required
                 />
               </div>
-              <button type="submit" className="sendButton" disabled={isSubmitting}>
-                  {isSubmitting ? 'Saving...' : 'Save'}
-              </button>
+              
+              <div className="item imageUploadItem">
+                <label htmlFor="imageUpload">Property Images (Exactly 4 Required)</label>
+                <input 
+                  id="imageUpload" 
+                  name="images" 
+                  type="file" 
+                  accept="image/jpeg,image/png,image/gif"
+                  onChange={handleImageUpload}
+                  multiple
+                  required 
+                />
+                {imagePreviews.length > 0 && (
+                  <div className="imagePreviewContainer">
+                    {imagePreviews.map((preview, index) => (
+                      <div key={index} className="imagePreview" style={{ position: 'relative' }}>
+                        {/* Close Button */}
+                        <button
+                          type="button"
+                          className="closeIconButton"
+                          onClick={() => handleRemoveImage(index)}
+                        >
+                          ✕ {/* X icon */}
+                        </button>
+                        {/* Image Preview */}
+                        <img
+                          src={preview.previewUrl}
+                          alt={`Property Image ${index + 1}`}
+                          style={{ maxWidth: '150px', maxHeight: '150px', margin: '5px' }}
+                        />
+                        <div>Image {index + 1}</div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                <div className="imageCount">{imagePreviews.length} / 4 images selected</div>
+              </div>
+              <div className="itemDesc descriptionItem">
+                <label htmlFor="description">Description</label>
+                <textarea
+                  id="description"
+                  name="description"
+                  value={formData.description}
+                  onChange={handleChange}
+                  rows="6" // Increases the height of the textarea
+                  maxLength="2000" // Limits the maximum number of characters
+                  required
+                />
+                <div className="characterCount">
+                  {formData.description.length} / 2000 characters
+                </div>
+              </div>
+        
+              <button
+              type="submit" className="sendButton" disabled={isSubmitting}
+              style={{
+                marginLeft: "90%",
+                backgroundColor: "#fece51",
+                color: "black",
+                fontSize: "20px",
+                border: "none",
+                borderRadius: "8px",
+                cursor: "pointer",
+                transition: "background-color 0.3s ease, transform 0.2s ease",
+                maxWidth: "200px",
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.backgroundColor = "#f0b600";
+                e.target.style.transform = "scale(1.05)";
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.backgroundColor = "#fece51";
+                e.target.style.transform = "scale(1)";
+              }}
+              onFocus={(e) => {
+                e.target.style.outline = "none";
+                e.target.style.boxShadow = "0 0 5px rgba(254, 206, 81, 0.7)";
+              }}
+              onBlur={(e) => {
+                e.target.style.boxShadow = "none";
+              }}
+            >
+              {isSubmitting ? 'Saving...' : 'Save'}
+            </button>
+
             </form>
           </div>
         </div>
-        <div className="sideContainer"></div>
+       
       </div>
     );
   }

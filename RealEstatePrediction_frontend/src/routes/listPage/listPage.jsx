@@ -84,32 +84,43 @@ const ListPage = () => {
   if (error) return <p>Erreur : {error}</p>;
 
   return (
-    <div className="listPage">
+    <div className="listPage"  style={{ paddingTop: "20px" }}>
       <div className="listContainer">
         <div className="wrapper">
           {/* Section des filtres */}
-          <div className="filter">
-            <h1>Search Filters</h1>
+          <div className="filter"> 
+          <h1 style={{fontSize: "40px", paddingTop: "20px" }}>
+            Search Filters
+          </h1>
+    
             <div className="top">
               <div className="item">
-                <label htmlFor="city">Location</label>
+                <label htmlFor="city" style={{fontSize: "18px", padding: "17px" }}>Location</label>
                 <select
-                  id="city"
-                  name="city"
-                  value={filters.city}
-                  onChange={(e) => handleFilterChange({ city: e.target.value })}
-                >
-                  <option value="">Select a City</option>
-                  {cities.map((city, index) => (
-                    <option key={index} value={city}>
-                      {city}
-                    </option>
-                  ))}
-                </select>
+                    id="city"
+                    name="city"
+                    value={filters.city}
+                    onChange={(e) => handleFilterChange({ city: e.target.value })}
+                    style={{
+                      padding: "5px",
+                      fontSize: "16px",
+                      color: "#333",
+                      borderRadius: "5px",
+                      border: "1px solid #ccc",
+                    }}
+                  >
+                    <option value="">Select a City</option>
+                    {cities.map((city, index) => (
+                      <option key={index} value={city}>
+                        {city}
+                      </option>
+                    ))}
+                  </select>
+
               </div>
             </div>
           </div>
-
+        <hr/>
           {/* Affichage des offres */}
           {offres && offres.length > 0 ? (
             offres.map((offre) => {
@@ -129,11 +140,11 @@ const ListPage = () => {
                   item={{
                     id: offre.id,
                     img: imageUrl,
-                    title: title || "Titre non disponible",
-                    address: address || "Adresse non disponible",
-                    price: price || "Prix non disponible",
-                    bedroom: bedroom || 0,
-                    bathroom: bathroom || 0,
+                    title: title || " Beautiful Modern House",
+                    address: address || " 123 Main St, Cityville",
+                    price: price || "$350,000",
+                    bedroom: bedroom || 3,
+                    bathroom: bathroom || 1,
                   }}
                 />
               );
@@ -145,7 +156,7 @@ const ListPage = () => {
       </div>
 
       {/* Section de la carte */}
-      <div className="mapContainer">
+      <div className="mapContainer" >
         <Map />
       </div>
     </div>

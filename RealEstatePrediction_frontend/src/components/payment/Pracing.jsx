@@ -69,7 +69,7 @@ function Pracing({ userId }) {
         setError("Une erreur est survenue lors de la gestion de la souscription.");
       }
     };
-  
+   
     fetchSubscription();
   };
   
