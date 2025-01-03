@@ -1,8 +1,27 @@
 import { useState } from "react";
 import "./chat.scss";
+import { request } from "../../helpers/apiService"; 
+import { useEffect } from "react";
 
-function Chat({ seller }) {
+function Chat({ sellerId }) {
   const [chat, setChat] = useState(true);
+  const [seller, setSeller] = useState(true);
+  const [error, setError] = useState(null);
+
+  const getSeller = async () => {
+    try {
+      let response;
+      response = await request("GET", `/api/v1/users/${sellerId}`);
+      setSeller(response.data);
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  useEffect(() => {
+    getSeller();
+  }, [sellerId]);
+
   return (
     <div className="chat">
       <div className="messages">

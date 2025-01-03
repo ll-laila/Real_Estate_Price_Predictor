@@ -34,21 +34,11 @@ function SingleOffrePage() {
   };
 
 
-  const getSeller = async () => {
-    try {
-      let response;
-      response = await request("GET", `/api/v1/users/${offre.userId}`);
-      setSeller(response.data);
-    } catch (err) {
-      setError(err.message);
-    }
-  };
 
 
 
   useEffect(() => {
     getOffreDetails();
-    getSeller();
     console.log("Offre loaded:", offre);  
 
   }, [id]);
@@ -90,7 +80,7 @@ function SingleOffrePage() {
             <div className="bottom">{immobilierResponse?.description || 'No Description Available'}</div>
             <div className="chatContainer">
               <div className="wrapper">
-                <Chat seller={seller} />
+                <Chat sellerId={offre.userId} />
               </div>
             </div>
           </div>
