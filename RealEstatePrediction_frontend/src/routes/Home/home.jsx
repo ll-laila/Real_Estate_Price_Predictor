@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./home.scss";
+
 
 function Home() {
   return (
