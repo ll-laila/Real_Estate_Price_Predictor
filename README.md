@@ -1,4 +1,4 @@
-# Prédiction des Prix Immobiliers
+# LamaEstate - Prédiction des Prix Immobiliers
 
 Ce projet est une application web moderne conçue pour gérer les annonces immobilières et fournir des prédictions basées sur l'intelligence artificielle (IA). Grâce à une architecture microservices, l'application assure modularité, scalabilité et performance. Le module IA, développé avec Python et Django, prédit l'évolution des prix immobiliers sur plusieurs années, offrant ainsi un outil stratégique pour les professionnels et particuliers.
 
