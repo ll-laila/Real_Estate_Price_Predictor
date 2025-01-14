@@ -15,6 +15,7 @@ Ce projet est une application web moderne conçue pour gérer les annonces immob
    - Passerelle API : Spring Cloud Gateway pour le routage et la gestion centralisée des requêtes.
    - Module IA : Implémenté en Python avec Django.
    - DevOps : Conteneurisation avec Docker, orchestration avec Kubernetes, et intégration continue avec Jenkins et deploiement sur AWS cloud.
+   - https://github.com/reall-estate-backend
 
 #
    <img width="540" alt="IA" src="https://github.com/user-attachments/assets/f1f3ab49-0dad-4e04-b2c0-f13c85470920" />
