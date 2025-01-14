@@ -24,7 +24,7 @@ function MyList() {
           const response = await request("GET", `/api/v1/users/allOffers/${user.id}`);
           setOffers(response.data); 
         } catch (err) {
-          setError("Erreur lors de la récupération des offres");
+          setError("");
           console.error(err);
         } finally {
           setLoading(false);
